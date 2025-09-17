@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Impacto da IA na Profissão</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body class="bg-light">
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">🧩 Metodologia da Pesquisa</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <section class="container">
+                        <p>
+                            Esta pesquisa foi elaborada com o objetivo de avaliar o <strong>impacto potencial da
+                                Inteligência Artificial (IA) nas diferentes profissões</strong>.
+                            O questionário utiliza <strong>7 perguntas-chave</strong>, cada uma associada a um peso
+                            específico dentro de um total de <strong>100 pontos</strong>.
+                            Esses pesos foram definidos considerando o grau de exposição de determinadas atividades à
+                            automação e a capacidade de adaptação dos profissionais.
+                        </p>
+
+                        <h5>⚖️ Critérios de avaliação</h5>
+                        <ul>
+                            <li><strong>Tarefas repetitivas x criativas:</strong> Profissões com alta carga repetitiva
+                                tendem a ter maior risco de automação.</li>
+                            <li><strong>Análise de dados e documentos:</strong> Quanto maior a dependência dessas
+                                tarefas, maior o impacto, já que IA se destaca nesse campo.</li>
+                            <li><strong>Possibilidade de substituição:</strong> Pergunta central que mede o quanto a
+                                atividade já pode ser realizada por sistemas inteligentes.</li>
+                            <li><strong>Importância do contato humano:</strong> Profissões que exigem interação
+                                interpessoal tendem a ter menor risco de substituição.</li>
+                            <li><strong>Uso atual de IA:</strong> Mede o grau de familiaridade e adaptação do
+                                profissional com a tecnologia.</li>
+                            <li><strong>Necessidade de atualização:</strong> Profissões que exigem constante aprendizado
+                                têm maior resiliência frente à IA.</li>
+                            <li><strong>Percepção individual:</strong> Considera a visão do próprio profissional sobre a
+                                IA em seu setor.</li>
+                        </ul>
+
+                        <h5>📊 Cálculo do impacto</h5>
+                        <p>
+                            Cada resposta gera uma pontuação proporcional ao peso da questão.
+                            Ao final, a soma é convertida em um percentual de <strong>0% a 100%</strong>, representando
+                            o nível estimado de impacto da IA naquela profissão.
+                        </p>
+
+                        <div class="alert alert-info">
+                            <strong>Interpretação dos resultados:</strong><br>
+                            <ul class="mb-0">
+                                <li><span class="text-success">0% – 33%:</span> Baixo impacto (profissão com baixa
+                                    probabilidade de automação)</li>
+                                <li><span class="text-warning">34% – 66%:</span> Médio impacto (possível automação
+                                    parcial das tarefas)</li>
+                                <li><span class="text-danger">67% – 100%:</span> Alto impacto (elevada probabilidade de
+                                    substituição ou transformação profunda)</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <h2 class="mb-4 text-center">Simulador de Impacto da IA na sua Profissão</h2>
+
+        <form id="iaForm">
+
+            <div class="mb-3">
+                <label class="form-label fw-bold"><span class="badge text-bg-primary">1</span> Sua profissão envolve
+                    mais tarefas repetitivas ou
+                    criativas?</label>
+                <div>
+                    <input type="radio" name="q1" value="20" required> Principalmente repetitivas<br>
+                    <input type="radio" name="q1" value="10"> Mistas (repetitivas e criativas)<br>
+                    <input type="radio" name="q1" value="0"> Principalmente criativas
+                </div>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label fw-bold"><span class="badge text-bg-primary">2</span> Em que medida seu
+                    trabalho depende da análise de dados, relatórios
+                    ou documentos?</label>
+                <div>
+                    <input type="radio" name="q2" value="15" required> Muito<br>
+                    <input type="radio" name="q2" value="8"> Moderado<br>
+                    <input type="radio" name="q2" value="0"> Pouco
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold"><span class="badge text-bg-primary">3</span> As principais tarefas da
+                    sua profissão já podem ser feitas, total
+                    ou parcialmente, por softwares ou IA?</label>
+                <div>
+                    <input type="radio" name="q3" value="25" required> Sim<br>
+                    <input type="radio" name="q3" value="12"> Parcialmente<br>
+                    <input type="radio" name="q3" value="0"> Não
+                </div>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label fw-bold"><span class="badge text-bg-primary">4</span> O contato humano e a
+                    relação interpessoal são essenciais para o
+                    desempenho do seu trabalho?</label>
+                <div>
+                    <input type="radio" name="q4" value="0" required> Pouco importantes<br>
+                    <input type="radio" name="q4" value="7"> Moderadamente importantes<br>
+                    <input type="radio" name="q4" value="15"> Muito importantes
+                </div>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label fw-bold"><span class="badge text-bg-primary">5</span> Você já utiliza
+                    ferramentas de IA (como ChatGPT, MidJourney,
+                    Copilot, etc.) no seu dia a dia profissional?</label>
+                <div>
+                    <input type="radio" name="q5" value="10" required> Frequentemente<br>
+                    <input type="radio" name="q5" value="5"> Às vezes<br>
+                    <input type="radio" name="q5" value="0"> Nunca
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold"><span class="badge text-bg-primary">6</span> Sua profissão exige
+                    atualização constante de conhecimento e
+                    adaptação a novas tecnologias?</label>
+                <div>
+                    <input type="radio" name="q6" value="5" required> Muito<br>
+                    <input type="radio" name="q6" value="3"> Moderadamente<br>
+                    <input type="radio" name="q6" value="0"> Pouco
+                </div>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label fw-bold"><span class="badge text-bg-primary">7</span> Você acredita que a IA
+                    será mais uma ferramenta de apoio ou uma
+                    ameaça de substituição no seu setor?</label>
+                <div>
+                    <input type="radio" name="q7" value="0" required> Apenas ferramenta de apoio<br>
+                    <input type="radio" name="q7" value="5"> Apoio e risco parcial<br>
+                    <input type="radio" name="q7" value="10"> Grande risco de substituição
+                </div>
+            </div>
+
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Calcular Impacto</button>
+                <button type="button" id="resetBtn" class="btn btn-secondary">Limpar</button>
+                <!-- Button trigger modal -->
+
+            </div>
+        </form>
+
+        <div class="mt-4">
+            <p class="mb-0">Guia de referência a Metodologia da pesquisa</p>
+            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Ver Metodologia da Pesquisa
+            </button>
+        </div>
+
+
+        <div class="mt-4" id="resultContainer" style="display:none;">
+            <h5>Resultado:</h5>
+            <div class="progress" style="height: 50px;">
+                <div id="impactBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">0%
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("iaForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let total = 0;
+            const formData = new FormData(this);
+            for (let value of formData.values()) {
+                total += parseInt(value);
+            }
+
+            let percent = Math.min(100, Math.round((total / 100) * 100));
+
+            const resultContainer = document.getElementById("resultContainer");
+            const impactBar = document.getElementById("impactBar");
+
+            // Atualiza largura, texto e aria
+            impactBar.style.width = percent + "%";
+            impactBar.innerText = percent + "%";
+            impactBar.setAttribute("aria-valuenow", percent);
+
+            // Primeiro limpa cores antigas
+            impactBar.classList.remove("bg-success", "bg-warning", "bg-danger");
+
+            // Adiciona cor conforme impacto
+            if (percent < 34) {
+                impactBar.classList.add("bg-success");
+            } else if (percent < 67) {
+                impactBar.classList.add("bg-warning");
+            } else {
+                impactBar.classList.add("bg-danger");
+            }
+
+            resultContainer.style.display = "block";
+        });
+
+        // Reset
+        document.getElementById("resetBtn").addEventListener("click", function () {
+            document.getElementById("iaForm").reset();
+            document.getElementById("resultContainer").style.display = "none";
+        });
+
+    </script>
+</body>
+
+</html>
