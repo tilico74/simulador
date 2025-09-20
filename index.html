@@ -103,6 +103,16 @@
         color: #fff;
         font-size: 0.9rem;
     }
+
+    .tab-content {
+        display: none;
+        /* escondidas por padrão */
+    }
+
+    .tab-content.active {
+        display: block;
+        /* só aparece a ativa */
+    }
 </style>
 
 <body>
@@ -138,7 +148,7 @@
         <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./img/imagem-tecnologica-sobre-ia-banner.webp" class="d-block w-100" alt="...">
+                    <img src="./img/inteligencia-artificial.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block mb-5">
                         <h1 class="text-warning display-1">Conhecimento em IA: Seu sálario 40% mais
                             alto</h1>
@@ -200,25 +210,30 @@
                                     <img src="./img/contador.jfif" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">Contador</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a
-                                            natural
-                                            lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text">Softwares de IA já categorizam lançamentos, analisam
+                                            documentos fiscais e até preveem riscos tributários. Mas isso não significa
+                                            o fim da contabilidade. Pelo contrário: com tarefas repetitivas
+                                            automatizadas, o contador ganha espaço estratégico, atuando em análise,
+                                            consultoria e decisões que exigem visão humana.</p>
 
                                     </div>
                                     <div class="card-footer">
-                                        <a href="#" class="btn btn-primary">Leia Mais</a>
+                                        <input value="Leia Mais" class="btn btn-primary tab-btn" data-target="div1">
                                     </div>
                                 </div>
                                 <div class="card">
                                     <img src="./img/libras-1b.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">Interprete de Libras</h5>
-                                        <p class="card-text">This card has supporting text below as a natural lead-in to
-                                            additional content.</p>
+                                        <p class="card-text">Aplicativos de tradução em tempo real levantam uma questão:
+                                            será que a IA pode substituir os intérpretes humanos? A resposta é não tão
+                                            simples. Em Libras, não falamos apenas de sinais, mas de cultura, emoção e
+                                            humanidade — elementos que nenhuma tecnologia consegue traduzir por
+                                            completo.</p>
 
                                     </div>
                                     <div class="card-footer">
-                                        <a href="#" class="btn btn-primary">Leia Mais</a>
+                                        <input value="Leia Mais" class="btn btn-primary tab-btn" data-target="div2">
                                     </div>
                                 </div>
                             </div>
@@ -231,32 +246,200 @@
                                     <img src="./img/mestre.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">Mestre de Obras</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a
-                                            natural
-                                            lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text">Na construção civil, drones inspecionam, softwares preveem
+                                            atrasos e sensores monitoram tudo. Mas isso não elimina o papel do mestre de
+                                            obras. Pelo contrário: sua liderança, experiência e capacidade de decisão
+                                            tornam-se ainda mais estratégicas em um cenário onde a tecnologia precisa
+                                            ser guiada por mãos humanas.</p>
 
                                     </div>
                                     <div class="card-footer">
-                                        <a href="#" class="btn btn-primary">Leia Mais</a>
+                                        <input value="Leia Mais" class="btn btn-primary tab-btn" data-target="div3">
                                     </div>
                                 </div>
                                 <div class="card">
                                     <img src="./img/artesa.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">Trabalhos Manuais</h5>
-                                        <p class="card-text">This card has supporting text below as a natural lead-in to
-                                            additional content.</p>
+                                        <p class="card-text">Impressoras 3D e softwares de design já mudam a forma de
+                                            criar, mas há algo insubstituível no feito à mão: autenticidade e
+                                            sensibilidade. Em meio à automação, cresce o valor do artesanato, da
+                                            marcenaria e da arte como expressão única da criatividade humana, que
+                                            nenhuma máquina é capaz de replicar.</p>
 
                                     </div>
                                     <div class="card-footer">
-                                        <a href="#" class="btn btn-primary">Leia Mais</a>
+                                        <input value="Leia Mais" class="btn btn-primary tab-btn" data-target="div4">
                                     </div>
                                 </div>
 
                             </div>
 
                         </div>
+
                     </div>
+                    <div id="div1" class="bg-danger tab-content">
+                        <h3 class="text-center my-4">Contabilidade e Inteligência Artificial: Transformação em
+                            Curso
+                        </h3>
+                        <p>A contabilidade está entre as áreas mais impactadas — e beneficiadas — pelo avanço da
+                            inteligência artificial (IA). Ferramentas inteligentes vêm revolucionando rotinas, reduzindo
+                            erros e aumentando a produtividade dos profissionais da área.</p>
+                        <p>Em 2025, essa transformação tende a se tornar ainda mais intensa. Os contadores tiveram (e
+                            continuarão tendo) que se adaptar ao uso de novas tecnologias que automatizam tarefas
+                            repetitivas, identificam padrões e aprendem continuamente com os dados inseridos.</p>
+                        <p>Softwares modernos já são capazes de:
+                        <ul>
+                            <li> <strong>Sugerir categorias contábeis</strong> para lançamentos bancários com base no
+                                histórico de
+                                transações;</li>
+                            <li><strong>Emitir alertas de riscos fiscais</strong>, evitando que situações críticas
+                                passem despercebidas;
+                            </li>
+                            <li><strong>Ler e importar automaticamente documentos fiscais</strong>, como notas
+                                eletrônicas, por meio de
+                                plataformas como a Arquivei, economizando horas de trabalho manual;
+                            </li>
+                            <li><strong>Classificar automaticamente lançamentos</strong> financeiros a partir do acesso
+                                direto às contas
+                                bancárias dos clientes;</li>
+                            <li><strong>Analisar riscos e mudanças na legislação</strong>, recomendando ajustes para
+                                manter a empresa em
+                                conformidade.</li>
+                        </ul>
+                        </p>
+                        <p>O ganho de produtividade é significativo. Com menos tempo gasto em tarefas operacionais, o
+                            contador pode focar em atividades mais estratégicas, como consultoria tributária,
+                            planejamento financeiro e tomada de decisão baseada em dados.</p>
+                        <p>Além disso, a IA oferece uma visão mais analítica e integrada da situação financeira das
+                            empresas. Com o cruzamento de informações de diferentes fontes, os sistemas geram relatórios
+                            personalizados que apontam tendências, riscos e oportunidades de forma clara e rápida.</p>
+                        <p>No entanto, é fundamental destacar a importância da <strong>segurança cibernética</strong>,
+                            especialmente no
+                            que diz respeito ao tratamento de dados sensíveis dos clientes. O uso de IA deve caminhar
+                            lado a lado com políticas robustas de proteção da informação.</p>
+                        <p>Por fim, os profissionais da contabilidade precisam desenvolver uma mentalidade de
+                            aprendizado contínuo. A atualização constante — já exigida pelas mudanças frequentes nas
+                            legislações fiscais — torna-se ainda mais essencial neste novo cenário tecnológico.</p>
+                        <p>A inteligência artificial já é uma realidade no mundo contábil. Cabe ao contador evoluir
+                            junto com ela e aproveitar ao máximo as oportunidades que essa revolução oferece.</p>
+
+                        <input type="button" value="Fechar" class="btn btn-primary tab-btn" data-target="div1">
+                    </div>
+
+                    <div id="div2" class="bg-success tab-content">
+                        <h3 class="text-center my-4">Intérpretes de Libras x Inteligência Artificial: ameaça ou
+                            transformação?
+                        </h3>
+
+                        <p>A profissão de intérprete de Libras sempre foi um elo essencial entre mundos: o da comunidade
+                            surda e o da sociedade ouvinte. Com sensibilidade, contexto cultural e habilidade
+                            linguística, esses profissionais fazem mais do que traduzir palavras, eles traduzem
+                            sentidos, intenções e emoções.</p>
+                        <p>Mas surge a pergunta que inquieta: a inteligência artificial pode substituir os intérpretes
+                            humanos?</p>
+                        <p>Nos últimos anos, vimos aplicativos e softwares de tradução em tempo real ganhando destaque,
+                            prometendo transformar voz em Libras e vice-versa em questão de segundos. A promessa é
+                            tentadora: acessibilidade em qualquer lugar, a qualquer hora. No entanto, apesar do avanço
+                            tecnológico, a IA ainda tropeça em nuances culturais, expressões idiomáticas e,
+                            principalmente, no aspecto humano da comunicação. A Libras, como qualquer língua, vai além
+                            de sinais mecânicos, envolve expressões faciais, entonação corporal e contexto social que
+                            nenhuma máquina domina com naturalidade.</p>
+                        <p>Portanto, embora a inteligência artificial seja uma ferramenta poderosa e esteja destinada a
+                            se tornar uma aliada indispensável, ela não deve extinguir a profissão. Pelo contrário: os
+                            intérpretes de Libras tendem a ganhar ainda mais relevância, atuando em situações complexas,
+                            em contextos de maior responsabilidade (como tribunais, hospitais ou eventos oficiais) e
+                            também no treinamento e supervisão das próprias tecnologias de acessibilidade.</p>
+                        <p>Se há um risco, ele não é o de desaparecer, mas o de se transformar. Assim como em outras
+                            áreas, os intérpretes precisarão se reinventar, dominando novas ferramentas e ocupando
+                            espaços estratégicos onde a presença humana é insubstituível.</p>
+                        <p>Em resumo, o futuro aponta para uma parceria: máquinas ampliando o acesso, e intérpretes
+                            garantindo a qualidade e humanidade da comunicação. Afinal, nenhuma inteligência artificial
+                            consegue traduzir um olhar acolhedor ou a sensibilidade de estar ao lado de quem precisa ser
+                            ouvido.</p>
+
+                    </div>
+
+                    <div id="div3" class="bg-warning tab-content">
+                        <h3 class="text-center my-4">O Mestre de Obras e a Inteligência Artificial
+                        </h3>
+                        <h4 class="text-center">Parceria que Transforma a Construção Civil </h4>
+                        <p>A profissão de mestre de obras é uma das mais estratégicas na construção civil. Ele atua como
+                            líder no canteiro de obras, coordenando equipes, acompanhando o uso de materiais, garantindo
+                            a execução correta dos projetos e zelando pela segurança e pelos prazos.</p>
+                        <p>Com o avanço da inteligência artificial (IA), diversas tarefas repetitivas e operacionais
+                            estão sendo automatizadas, trazendo mais eficiência para o setor. Veja algumas aplicações
+                            que já estão transformando o dia a dia das obras:</p>
+                        <p>
+                        <ul>
+                            <li>Planejamento inteligente: softwares de gestão conseguem criar cronogramas otimizados,
+                                prever atrasos e distribuir recursos de forma mais eficiente.</li>
+                            <li>Inspeções com drones: drones equipados com IA realizam inspeções em tempo real,
+                                identificando falhas estruturais e riscos de segurança antes que se tornem problemas
+                                graves. </li>
+                            <li>Sensores inteligentes: monitoram o consumo de água, energia e materiais, gerando
+                                relatórios instantâneos que ajudam a tornar a obra mais sustentável. </li>
+                            <li>Análise de riscos: sistemas automatizados conseguem prever impactos de mudanças
+                                climáticas, problemas logísticos e outros imprevistos, oferecendo alternativas rápidas.
+                            </li>
+                        </ul>
+                        </p>
+                        <p>Apesar dessas inovações, o papel do mestre de obras continua essencial. A liderança no campo,
+                            a experiência prática e a capacidade de tomar decisões rápidas diante de situações
+                            inesperadas são habilidades humanas que a IA ainda não substitui.</p>
+                        <p>O futuro da profissão aponta para um perfil mais tecnológico e estratégico. O mestre de obras
+                            que souber usar a IA como aliada terá mais controle, produtividade e qualidade em suas
+                            entregas.</p>
+                        <p class="text-center">
+                            <strong>
+                                “Mesmo com a tecnologia no canteiro de obras, a liderança humana continua sendo a
+                                base da construção.”
+                            </strong>
+                        </p>
+
+                    </div>
+                    <div id="div4" class="bg-info tab-content">
+                        <h3 class="text-center my-4">Trabalhos Manuais</h3>
+                        <h4 class="text-center"> Criatividade Humana em Tempos de Inteligência Artificial</h4>
+                        <p>Profissões ligadas aos trabalhos manuais — como artesanato, marcenaria, cerâmica, costura,
+                            escultura e pintura — representam a expressão direta da criatividade humana. São atividades
+                            que envolvem sensibilidade, técnica e cultura, transformando matérias-primas em peças únicas
+                            e carregadas de significado.</p>
+                        <p>Com o avanço da inteligência artificial (IA) e das tecnologias digitais, esse campo também
+                            passou por mudanças importantes. Ferramentas modernas estão otimizando processos e ampliando
+                            possibilidades de criação. Entre as principais inovações, destacam-se: </p>
+                        <p>
+                        <ul>
+                            <li>Impressoras 3D e corte a laser: permitem produzir objetos com precisão e agilidade,
+                                reduzindo o tempo de execução de peças que antes exigiam dias de trabalho manual.</li>
+                            <li>Softwares de design com IA: auxiliam na criação de modelos e protótipos, acelerando
+                                etapas do processo criativo.</li>
+                            <li>Plataformas de e-commerce com algoritmos inteligentes: conectam artesãos e consumidores
+                                de forma mais eficiente, personalizando recomendações e ampliando o alcance das vendas.
+                            </li>
+                        </ul>
+                        </p>
+                        <p>Apesar dessas transformações, os trabalhos manuais não estão entre as profissões ameaçadas
+                            pela IA. Ao contrário: em um mundo cada vez mais automatizado, cresce a valorização do feito
+                            à mão como símbolo de autenticidade, exclusividade e conexão humana. Produtos artesanais
+                            carregam identidade cultural e emocional — atributos que a inteligência artificial ainda não
+                            consegue replicar plenamente. </p>
+                        <p>Caminhos para o futuro:
+                        <ul>
+                            <li>Tecnologia como aliada: profissionais que incorporam ferramentas digitais ao processo
+                                criativo ganham em produtividade sem perder a originalidade.</li>
+                            <li>Valorização do humano: a demanda por peças autorais e únicas tende a crescer, destacando
+                                o papel insubstituível da sensibilidade e da expressão individual.</li>
+                        </ul>
+                        </p>
+                        <p class="text-center">
+                            <strong>
+                                “Em um mundo automatizado, o toque humano é o que torna cada criação verdadeiramente
+                                única.”
+                            </strong>
+                        </p>
+                    </div>
+                </div>
             </section>
 
             <section id="simulador" class="my-5 py-4 bg-primary-subtle">
@@ -265,108 +448,102 @@
 
                     <h2 class="my-4 text-center text-primary">Simulador de Impacto da IA na sua Profissão</h2>
 
-
                     <form id="iaForm" class="rounded border border-2 border-primary p-4">
-
-
 
                         <div class="mb-3">
                             <label class="form-label fw-bold"><span class="badge text-bg-primary">1</span> Sua profissão
-                                envolve
-                                mais tarefas repetitivas ou
-                                criativas?</label>
-                            <div>
-                                <input type="radio" name="q1" value="20" required> Principalmente repetitivas<br>
-                                <input type="radio" name="q1" value="10"> Mistas (repetitivas e criativas)<br>
-                                <input type="radio" name="q1" value="0"> Principalmente criativas
-                            </div>
+                                envolve mais tarefas repetitivas ou criativas?</label>
+                            <select class="form-select" name="q1" required>
+                                <option value="">Selecione...</option>
+                                <option value="20">Principalmente repetitivas</option>
+                                <option value="10">Mistas (repetitivas e criativas)</option>
+                                <option value="0">Principalmente criativas</option>
+                            </select>
                         </div>
-
 
                         <div class="mb-3">
                             <label class="form-label fw-bold"><span class="badge text-bg-primary">2</span> Em que medida
                                 seu
-                                trabalho depende da análise de dados, relatórios
-                                ou documentos?</label>
-                            <div>
-                                <input type="radio" name="q2" value="15" required> Muito<br>
-                                <input type="radio" name="q2" value="8"> Moderado<br>
-                                <input type="radio" name="q2" value="0"> Pouco
-                            </div>
+                                trabalho depende da análise de dados, relatórios ou documentos?</label>
+                            <select class="form-select" name="q2" required>
+                                <option value="">Selecione...</option>
+                                <option value="15">Muito</option>
+                                <option value="8">Moderado</option>
+                                <option value="0">Pouco</option>
+                            </select>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label fw-bold"><span class="badge text-bg-primary">3</span> As principais
-                                tarefas da
-                                sua profissão já podem ser feitas, total
-                                ou parcialmente, por softwares ou IA?</label>
-                            <div>
-                                <input type="radio" name="q3" value="25" required> Sim<br>
-                                <input type="radio" name="q3" value="12"> Parcialmente<br>
-                                <input type="radio" name="q3" value="0"> Não
-                            </div>
+                                tarefas
+                                da sua profissão já podem ser feitas, total ou parcialmente, por softwares ou
+                                IA?</label>
+                            <select class="form-select" name="q3" required>
+                                <option value="">Selecione...</option>
+                                <option value="25">Sim</option>
+                                <option value="12">Parcialmente</option>
+                                <option value="0">Não</option>
+                            </select>
                         </div>
-
 
                         <div class="mb-3">
                             <label class="form-label fw-bold"><span class="badge text-bg-primary">4</span> O contato
-                                humano
-                                e a
-                                relação interpessoal são essenciais para o
-                                desempenho do seu trabalho?</label>
-                            <div>
-                                <input type="radio" name="q4" value="0" required> Pouco importantes<br>
-                                <input type="radio" name="q4" value="7"> Moderadamente importantes<br>
-                                <input type="radio" name="q4" value="15"> Muito importantes
-                            </div>
+                                humano e a
+                                relação interpessoal são essenciais para o desempenho do seu trabalho?</label>
+                            <select class="form-select" name="q4" required>
+                                <option value="">Selecione...</option>
+                                <option value="0">Pouco importantes</option>
+                                <option value="7">Moderadamente importantes</option>
+                                <option value="15">Muito importantes</option>
+                            </select>
                         </div>
-
 
                         <div class="mb-3">
                             <label class="form-label fw-bold"><span class="badge text-bg-primary">5</span> Você já
                                 utiliza
-                                ferramentas de IA (como ChatGPT, MidJourney,
-                                Copilot, etc.) no seu dia a dia profissional?</label>
-                            <div>
-                                <input type="radio" name="q5" value="10" required> Frequentemente<br>
-                                <input type="radio" name="q5" value="5"> Às vezes<br>
-                                <input type="radio" name="q5" value="0"> Nunca
-                            </div>
+                                ferramentas de IA (como ChatGPT, MidJourney, Copilot, etc.) no seu dia a dia
+                                profissional?</label>
+                            <select class="form-select" name="q5" required>
+                                <option value="">Selecione...</option>
+                                <option value="10">Frequentemente</option>
+                                <option value="5">Às vezes</option>
+                                <option value="0">Nunca</option>
+                            </select>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label fw-bold"><span class="badge text-bg-primary">6</span> Sua profissão
                                 exige
-                                atualização constante de conhecimento e
-                                adaptação a novas tecnologias?</label>
-                            <div>
-                                <input type="radio" name="q6" value="5" required> Muito<br>
-                                <input type="radio" name="q6" value="3"> Moderadamente<br>
-                                <input type="radio" name="q6" value="0"> Pouco
-                            </div>
+                                atualização constante de conhecimento e adaptação a novas tecnologias?</label>
+                            <select class="form-select" name="q6" required>
+                                <option value="">Selecione...</option>
+                                <option value="5">Muito</option>
+                                <option value="3">Moderadamente</option>
+                                <option value="0">Pouco</option>
+                            </select>
                         </div>
-
 
                         <div class="mb-3">
                             <label class="form-label fw-bold"><span class="badge text-bg-primary">7</span> Você acredita
-                                que
-                                a IA
-                                será mais uma ferramenta de apoio ou uma
-                                ameaça de substituição no seu setor?</label>
-                            <div>
-                                <input type="radio" name="q7" value="0" required> Apenas ferramenta de apoio<br>
-                                <input type="radio" name="q7" value="5"> Apoio e risco parcial<br>
-                                <input type="radio" name="q7" value="10"> Grande risco de substituição
-                            </div>
+                                que a IA
+                                será mais uma ferramenta de apoio ou uma ameaça de substituição no seu setor?</label>
+                            <select class="form-select" name="q7" required>
+                                <option value="">Selecione...</option>
+                                <option value="0">Apenas ferramenta de apoio</option>
+                                <option value="5">Apoio e risco parcial</option>
+                                <option value="10">Grande risco de substituição</option>
+                            </select>
                         </div>
+
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary">Calcular Impacto</button>
                             <button type="button" id="resetBtn" class="btn btn-secondary">Limpar</button>
-                            <!-- Button trigger modal -->
-
                         </div>
 
                     </form>
+
+
+
                     <div class="mt-4" id="resultContainer" style="display:none;">
                         <h5>Resultado:</h5>
                         <div class="progress" style="height: 50px;">
@@ -407,7 +584,7 @@
                             <p>Elisia</p>
                         </div>
                         <div class="col-md">
-                            <img src="./img/img04.jpg" class="rounded border border-2" alt="...">
+                            <img src="./img/img05.png" class="rounded border border-2" alt="...">
                             <p>Nicolas</p>
                         </div>
                         <div class="col-md">
@@ -419,6 +596,14 @@
                 </div>
             </section>
         </div>
+
+
+        <section>
+            <div>
+                <h2>Referências Bibliográficas</h2>
+            </div>
+        </section>
+
     </main>
 
 
@@ -540,6 +725,27 @@
             document.getElementById("resultContainer").style.display = "none";
         });
 
+
+
+    </script>
+    <script>
+        // Seleciona todos os botões e divs
+        const buttons = document.querySelectorAll(".tab-btn");
+        const contents = document.querySelectorAll(".tab-content");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                // Esconde todas as divs
+                contents.forEach(div => div.classList.remove("active"));
+
+                // Pega o ID da div alvo pelo atributo data-target
+                const targetId = button.getAttribute("data-target");
+                const targetDiv = document.getElementById(targetId);
+
+                // Mostra apenas a div clicada
+                targetDiv.classList.add("active");
+            });
+        });
     </script>
 
 </body>
