@@ -52,12 +52,16 @@
     }
 
     #equipe img:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 
     .footer {
         background: #626365;
         color: #fff;
+    }
+
+    .footer img:hover {
+        transform: scale(1.05);
     }
 
     .tab-content {
@@ -68,6 +72,10 @@
     .tab-content.active {
         display: block;
         /* só aparece a ativa */
+    }
+
+    a {
+        text-decoration: none;
     }
 </style>
 
@@ -626,10 +634,13 @@
                             <button type="submit" class="btn btn-primary">Calcular Impacto</button>
                             <button type="button" id="resetBtn" class="btn btn-secondary">Limpar</button>
                         </div>
+                        <div class=" text-center">
+                            <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Ver Metodologia da Pesquisa
+                            </a>
+                        </div>
 
                     </form>
-
-
 
                     <div class="mt-4" id="resultContainer" style="display:none;">
                         <h5>Resultado:</h5>
@@ -642,12 +653,6 @@
                         </div>
                     </div>
 
-                    <div class=" text-center">
-                        <button type="button" class="btn btn-link" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            Ver Metodologia da Pesquisa
-                        </button>
-                    </div>
                 </div>
             </section>
 
@@ -785,7 +790,7 @@
                     <li>
                         <a href="https://g1.globo.com/trabalho-e-carreira/noticia/2025/08/03/as-40-profissoes-mais-impactadas-pela-inteligencia-artificial-segundo-estudo-da-microsoft.ghtml"
                             target="_blank" rel="noopener noreferrer">
-                            <cite>G1 – Estudo da Microsoft: As 40 Profissões mais impactadas pela inteligência
+                            <cite>G1 - Estudo da Microsoft: As 40 Profissões mais impactadas pela inteligência
                                 artificial</cite>.</a>
                         <p>
                             Apresenta um estudo que identifica profissões que serão fortemente afetadas pela IA,
@@ -805,12 +810,17 @@
     <footer class="footer">
         <div class="container text-center py-3">
             <div class="row">
-                <div class="col"><img src="./img/logo_github.png" alt=""></div>
-                <div class="col"><img src="./img/logo_jovem_programador.png" alt=""></div>
-                <div class="col"><img src="./img/logo_senac.png" alt=""></div>
-                <div class="col"><img src="./img/logo_seprosc.png" alt=""></div>
+                <div class="col"><a href="https://github.com/tilico74/simulador" target="_blank"><img
+                            src="./img/logo_github.png" alt=""></a></div>
+                <div class="col"><a href="https://www.jovemprogramador.com.br/" target="_blank"><img
+                            src="./img/logo_jovem_programador.png" alt=""></a>
+                </div>
+                <div class="col"><a href="https://portal.sc.senac.br/" target="_blank"><img src="./img/logo_senac.png"
+                            alt=""></a></div>
+                <div class="col"><a href="https://www.seprosc.com.br/" target="_blank"><img src="./img/logo_seprosc.png"
+                            alt=""></a></div>
             </div>
-            <p class="mb-0">&copy; 2024 Nome PROJETO. Todos os direitos reservados.</p>
+            <p class="mb-0">&copy; 2025 Nome PROJETO. Todos os direitos reservados.</p>
         </div>
     </footer>
 
