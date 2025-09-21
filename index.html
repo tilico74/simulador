@@ -125,8 +125,8 @@
     /* Flip card equipe */
     .flip-card {
         background-color: transparent;
-        width: 150px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
         perspective: 1000px;
         margin: 0 auto;
     }
@@ -178,6 +178,41 @@
     #simulador {
         background-color: var(--tx-white-muted);
     }
+
+    .rotate-animate {
+        display: inline-block;
+        animation: spin 0.6s infinite alternate;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(90deg);
+        }
+
+        to {
+            transform: rotate(100deg);
+        }
+    }
+
+    .text-banner {
+        text-shadow:
+            -2px -1px 0 white,
+            2px -1px 0 white,
+            -2px 1px 0 white,
+            2px 1px 0 white,
+            2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .select-custom {
+        background-color: var(--tx-white-muted);
+        border: 0.12rem solid var(--bg-4);
+        outline: none;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .select-custom:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
 </style>
 
 <body>
@@ -219,9 +254,9 @@
                 <div class="carousel-item active">
                     <img src="./img/inteligencia-artificial.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block mb-5">
-                        <h1 class="text-warning display-1">Conhecimento em IA: Seu sálario 40% mais
+                        <h1 class="text-banner text-warning display-1 fw-bold">Conhecimento em IA: Seu sálario 40% mais
                             alto</h1>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <p>Saiba o futuro das profissões com a evolução Inteligência Artificial.</p>
                     </div>
                 </div>
             </div>
@@ -230,35 +265,17 @@
             <section id="inicio" class="my-5 py-4">
                 <div class="container">
                     <p>
-                        On the other hand, we denounce with righteous indignation and dislike men who are so beguiled
-                        and
-                        demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot
-                        foresee
-                        the
-                        pain
-                        and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty
-                        through
-                        weakness of will, which is the same as saying through shrinking from toil and pain. These cases
-                        are
-                        perfectly simple and easy to distinguish. In a free hour, when our power of choice is
-                        untrammelled
-                        and
-                        when
-                        nothing prevents our being able to do what we like best, every pleasure is to be welcomed and
-                        every
-                        pain
-                        avoided. But in certain circumstances and owing to the claims of duty or the obligations of
-                        business
-                        it
-                        will
-                        frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man
-                        therefore
-                        always
-                        holds in these matters to this principle of selection: he rejects pleasures to secure other
-                        greater
-                        pleasures, or else he endures pains to avoid worse pains
+                        A revolução digital impulsionada pela Inteligência Artificial está remodelando o mercado de
+                        trabalho em ritmo acelerado. Profissões antes vistas como indispensáveis começam a dividir
+                        espaço com algoritmos e máquinas capazes de executar atividades com rapidez e precisão. O
+                        contador e o intérprete de Libras já enfrentam transformações intensas, pois grande parte de
+                        suas funções rotineiras pode ser substituída por softwares inteligentes.
                     </p>
-
+                    <p>
+                        Em contrapartida, áreas como a de mestre de obras e os trabalhos manuais mantêm sua força,
+                        apoiadas em competências humanas que a tecnologia ainda não consegue reproduzir: liderança,
+                        improviso, criatividade e sensibilidade prática.
+                    </p>
                 </div>
 
             </section>
@@ -288,7 +305,8 @@
                                                 consultoria e decisões que exigem visão humana.</p>
                                         </div>
                                         <div class="card-footer">
-                                            <a href="#div1" class="btn btn-danger tab-btn" data-target="div1">Saiba
+                                            <a href="#div1" class="btn btn-danger tab-btn" data-target="div1"><i
+                                                    class="bi bi-hand-index-thumb rotate-animate fs-5"></i> Saiba
                                                 Mais</a>
                                         </div>
                                     </div>
@@ -308,7 +326,8 @@
                                                 completo.</p>
                                         </div>
                                         <div class="card-footer">
-                                            <a href="#div2" class="btn btn-danger tab-btn" data-target="div2">Saiba
+                                            <a href="#div2" class="btn btn-danger tab-btn" data-target="div2"><i
+                                                    class="bi bi-hand-index-thumb rotate-animate fs-5"></i> Saiba
                                                 Mais</a>
                                         </div>
                                     </div>
@@ -336,7 +355,8 @@
                                                 ser guiada por mãos humanas.</p>
                                         </div>
                                         <div class="card-footer">
-                                            <a href="#div3" class="btn btn-success tab-btn" data-target="div3">Saiba
+                                            <a href="#div3" class="btn btn-success tab-btn" data-target="div3"><i
+                                                    class="bi bi-hand-index-thumb rotate-animate fs-5"></i> Saiba
                                                 Mais</a>
                                         </div>
                                     </div>
@@ -354,7 +374,8 @@
                                                 nenhuma máquina é capaz de replicar.</p>
                                         </div>
                                         <div class="card-footer">
-                                            <a href="#div4" class="btn btn-success tab-btn" data-target="div4">Saiba
+                                            <a href="#div4" class="btn btn-success tab-btn" data-target="div4"><i
+                                                    class="bi bi-hand-index-thumb rotate-animate fs-5"></i> Saiba
                                                 Mais</a>
                                         </div>
                                     </div>
@@ -657,13 +678,22 @@
                     <h2 class="my-4 text-center"><i class="bi bi-card-checklist fs-1"></i> Simulador de Impacto
                         da IA na sua Profissão</h2>
 
+                    <p>
+                        Quer saber se a sua carreira está entre as mais impactadas pela Inteligência Artificial?
+                        Experimente nosso simulador interativo! Basta escolher as respostas e descobrir se sua profissão
+                        corre
+                        alto, médio ou baixo risco de ser transformada pela IA. Uma forma prática e divertida de
+                        refletir sobre o futuro do trabalho.
+                    </p>
+
+
                     <form id="iaForm" class="p-4">
 
                         <div class="mb-3">
                             <label class="form-label fw-bold text-primary"><span
                                     class="badge bg-primary-badge  text-white">1</span> Sua profissão
                                 envolve mais tarefas repetitivas ou criativas?</label>
-                            <select class="form-select" name="q1" required>
+                            <select class="form-select select-custom" name="q1" required>
                                 <option value="">Selecione...</option>
                                 <option value="20">Principalmente repetitivas</option>
                                 <option value="10">Mistas (repetitivas e criativas)</option>
@@ -676,7 +706,7 @@
                                     class="badge bg-primary-badge  text-white">2</span> Em que medida
                                 seu
                                 trabalho depende da análise de dados, relatórios ou documentos?</label>
-                            <select class="form-select" name="q2" required>
+                            <select class="form-select select-custom" name="q2" required>
                                 <option value="">Selecione...</option>
                                 <option value="15">Muito</option>
                                 <option value="8">Moderado</option>
@@ -690,7 +720,7 @@
                                 tarefas
                                 da sua profissão já podem ser feitas, total ou parcialmente, por softwares ou
                                 IA?</label>
-                            <select class="form-select" name="q3" required>
+                            <select class="form-select select-custom" name="q3" required>
                                 <option value="">Selecione...</option>
                                 <option value="25">Sim</option>
                                 <option value="12">Parcialmente</option>
@@ -703,7 +733,7 @@
                                     class="badge bg-primary-badge  text-white">4</span> O contato
                                 humano e a
                                 relação interpessoal são essenciais para o desempenho do seu trabalho?</label>
-                            <select class="form-select" name="q4" required>
+                            <select class="form-select select-custom" name="q4" required>
                                 <option value="">Selecione...</option>
                                 <option value="0">Pouco importantes</option>
                                 <option value="7">Moderadamente importantes</option>
@@ -717,7 +747,7 @@
                                 utiliza
                                 ferramentas de IA (como ChatGPT, MidJourney, Copilot, etc.) no seu dia a dia
                                 profissional?</label>
-                            <select class="form-select" name="q5" required>
+                            <select class="form-select select-custom" name="q5" required>
                                 <option value="">Selecione...</option>
                                 <option value="10">Frequentemente</option>
                                 <option value="5">Às vezes</option>
@@ -730,7 +760,7 @@
                                     class="badge bg-primary-badge  text-white">6</span> Sua profissão
                                 exige
                                 atualização constante de conhecimento e adaptação a novas tecnologias?</label>
-                            <select class="form-select" name="q6" required>
+                            <select class="form-select select-custom" name="q6" required>
                                 <option value="">Selecione...</option>
                                 <option value="5">Muito</option>
                                 <option value="3">Moderadamente</option>
@@ -743,7 +773,7 @@
                                     class="badge bg-primary-badge  text-white">7</span> Você acredita
                                 que a IA
                                 será mais uma ferramenta de apoio ou uma ameaça de substituição no seu setor?</label>
-                            <select class="form-select" name="q7" required>
+                            <select class="form-select select-custom" name="q7" required>
                                 <option value="">Selecione...</option>
                                 <option value="0">Apenas ferramenta de apoio</option>
                                 <option value="5">Apoio e risco parcial</option>
@@ -844,7 +874,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md pt-5">
+                    <div class="col-md pt-5 text-center">
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
