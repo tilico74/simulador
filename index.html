@@ -108,7 +108,51 @@
     a {
         text-decoration: none;
     } 
-    
+
+    /* Flip card equipe */
+    .flip-card {
+        background-color: transparent;
+        width: 150px;
+        height: 150px;
+        perspective: 1000px;
+        margin: 0 auto;
+    }
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .flip-card-front img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .flip-card-back {
+        background: #fff;
+        color: var(--bg-2);
+        transform: rotateY(180deg);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        font-size: 1rem;
+        border: 2px solid var(--bg-4);
+    }
 </style>
 
 <body>
@@ -697,26 +741,65 @@
                     <h2 class="text-center">Equipe de Desenvolvimento</h2>
                     <div class="row text-center">
                         <div class="col-md">
-                            <img src="./img/img01.jpg" class="rounded border border-1" alt="...">
-                            <p class="pt-2">Rebeca Araujo Gama</p>
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="./img/img01.jpg" class="rounded border border-1 w-100" alt="...">
+                                    </div>
+                                    <div class="flip-card-back d-flex align-items-center justify-content-center">
+                                        <span class="fw-bold text-primary">Rebeca Araujo Gama</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md">
-                            <img src="./img/img02.jpg" class="rounded border border-2" alt="...">
-                            <p class="pt-2">Jackson da Silva Feliciano</p>
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="./img/img02.jpg" class="rounded border border-2 w-100" alt="...">
+                                    </div>
+                                    <div class="flip-card-back d-flex align-items-center justify-content-center">
+                                        <span class="fw-bold text-primary">Jackson da Silva Feliciano</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md">
-                            <img src="./img/img04.jpg" class="rounded border border-2" alt="...">
-                            <p class="pt-2">Elisia dos Santos Marinho</p>
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="./img/img04.jpg" class="rounded border border-2 w-100" alt="...">
+                                    </div>
+                                    <div class="flip-card-back d-flex align-items-center justify-content-center">
+                                        <span class="fw-bold text-primary">Elisia dos Santos Marinho</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md">
-                            <img src="./img/img05.png" class="rounded border border-2" alt="...">
-                            <p class="pt-2">Nicolas Pietro Paglioni</p>
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="./img/img05.png" class="rounded border border-2 w-100" alt="...">
+                                    </div>
+                                    <div class="flip-card-back d-flex align-items-center justify-content-center">
+                                        <span class="fw-bold text-primary">Nicolas Pietro Paglioni</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md">
-                            <img src="./img/img03.jpg" class="rounded border border-2" alt="...">
-                            <p class="pt-2">Nelson Cristiano S. Jucoski</p>
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="./img/img03.jpg" class="rounded border border-2 w-100" alt="...">
+                                    </div>
+                                    <div class="flip-card-back d-flex align-items-center justify-content-center">
+                                        <span class="fw-bold text-primary">Nelson Cristiano S. Jucoski</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
                     <div class="text-center mt-4">
                         <img src="./img/karina_casola.jfif" class="rounded border border-2" alt="...">
