@@ -13,29 +13,59 @@
 
 </head>
 <style>
+    :root {
+        /* fundos */
+        --bg-1: #01233c;
+        --bg-2: #184F71;
+        --bg-3: #196899;
+        --bg-4: #41A3DC;
+        --bg-5: #3DA9BE;
+        --bg-6: #CBCBAF;
+
+        /* textos claros */
+        --tx-white: #FFFFFF;
+        --tx-white-soft: #FAFAFA;
+        /* idem F8FAFC */
+        --tx-white-muted: #E5E7EB;
+
+        /* textos escuros */
+        --tx-black: #000000;
+        --tx-gray-900: #111827;
+        --tx-slate-900: #0B1220;
+        --tx-gray-800: #1F2937;
+    }
+
     body {
         font-family: 'Roboto', sans-serif;
+        scroll-behavior: smooth;
+        color: var(--tx-gray-900);
+
+        .text-primary {
+            color: var(--bg-3) !important;
+        }
+        .bg-primary-badge {
+            background-color: var(--bg-3) !important;
+        }
     }
 
     .card-footer {
         border-top: none;
+        background-color: transparent;
     }
 
     .navbar {
-        background: rgba(2, 2, 25, 0.85) !important;
-        backdrop-filter: blur(8px);
+        background: var(--bg-1) !important;
     }
 
     .card {
         border: none;
         border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
-        transform: translateY(-3px);
+        transform: scale(1.02);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
@@ -56,8 +86,9 @@
     }
 
     .footer {
-        background: #626365;
-        color: #fff;
+        background: var(--tx-white-soft);
+        color: var(--tx-white-muted);
+        color: var(--bg-1);
     }
 
     .footer img:hover {
@@ -81,7 +112,7 @@
 
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: rgba(2, 2, 25, 0.959);">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark py-3">
             <div class=" container">
                 <a class="navbar-brand" href="#">Nome PROJETO</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
@@ -110,7 +141,9 @@
             </div>
 
         </nav>
-        <div id="carouselExample" class="carousel slide">
+    </header>
+    <main>
+        <div id="carouselExample" class="carousel slide brand-banner">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="./img/inteligencia-artificial.png" class="d-block w-100" alt="...">
@@ -122,9 +155,7 @@
                 </div>
             </div>
         </div>
-    </header>
-    <main>
-        <div>
+        <section class="section-intro">
             <section id="inicio" class="my-5 py-4">
                 <div class="container">
                     <p>
@@ -169,83 +200,86 @@
                         Inteligência Artificial</h2>
                     <div class=" row text-center">
                         <div class="col-md-6">
-                            <h2 class="text-center my-4 text-danger">Mais Afetadas</h2>
-                            <div class="card-group">
-                                <div class="card border border-end-0 border-danger border-2">
-                                    <img src="./img/contador.jfif"
-                                        class="card-img-top border-bottom border-danger border-5" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Contador</h5>
-                                        <p class="card-text">Softwares de IA já categorizam lançamentos, analisam
-                                            documentos fiscais e até preveem riscos tributários. Mas isso não significa
-                                            o fim da contabilidade. Pelo contrário: com tarefas repetitivas
-                                            automatizadas, o contador ganha espaço estratégico, atuando em análise,
-                                            consultoria e decisões que exigem visão humana.</p>
-
-                                    </div>
-                                    <div class="card-footer">
-                                        <a href="#div1" class="btn btn-danger tab-btn" data-target="div1">Saiba
-                                            Mais</a>
+                            <h3 class="text-center my-4 text-danger">Mais Afetadas</h3>
+                            <div class="row g-3 justify-content-center">
+                                <div class="col-12 col-md-6">
+                                    <div class="card border border-danger border-2 h-100">
+                                        <img src="./img/contador.jfif"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Contador</h5>
+                                            <p class="card-text">Softwares de IA já categorizam lançamentos, analisam
+                                                documentos fiscais e até preveem riscos tributários. Mas isso não significa
+                                                o fim da contabilidade. Pelo contrário: com tarefas repetitivas
+                                                automatizadas, o contador ganha espaço estratégico, atuando em análise,
+                                                consultoria e decisões que exigem visão humana.</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="#div1" class="btn btn-danger tab-btn" data-target="div1">Saiba
+                                                Mais</a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="card border border-start-0 border-danger border-2">
-                                    <img src="./img/libras-1b.jpg"
-                                        class="card-img-top border-bottom border-danger border-5" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Interprete de Libras</h5>
-                                        <p class="card-text">Aplicativos de tradução em tempo real levantam uma questão:
-                                            será que a IA pode substituir os intérpretes humanos? A resposta é não tão
-                                            simples. Em Libras, não falamos apenas de sinais, mas de cultura, emoção e
-                                            humanidade — elementos que nenhuma tecnologia consegue traduzir por
-                                            completo.</p>
-
-                                    </div>
-                                    <div class="card-footer">
-                                        <a href="#div2" class="btn btn-danger tab-btn" data-target="div2">Saiba
-                                            Mais</a>
+                                <div class="col-12 col-md-6">
+                                    <div class="card border border-danger border-2 h-100">
+                                        <img src="./img/libras-1b.jpg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Interprete de Libras</h5>
+                                            <p class="card-text">Aplicativos de tradução em tempo real levantam uma questão:
+                                                será que a IA pode substituir os intérpretes humanos? A resposta é não tão
+                                                simples. Em Libras, não falamos apenas de sinais, mas de cultura, emoção e
+                                                humanidade — elementos que nenhuma tecnologia consegue traduzir por
+                                                completo.</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="#div2" class="btn btn-danger tab-btn" data-target="div2">Saiba
+                                                Mais</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
                         <div class="col-md-6">
-                            <h2 class="text-center my-4 text-success">Menos Afetadas</h2>
-                            <div class="card-group">
-                                <div class="card  border border-end-0 border-success border-2">
-                                    <img src="./img/mestre.png"
-                                        class="card-img-top border-bottom border-success border-5" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Mestre de Obras</h5>
-                                        <p class="card-text">Na construção civil, drones inspecionam, softwares preveem
-                                            atrasos e sensores monitoram tudo. Mas isso não elimina o papel do mestre de
-                                            obras. Pelo contrário: sua liderança, experiência e capacidade de decisão
-                                            tornam-se ainda mais estratégicas em um cenário onde a tecnologia precisa
-                                            ser guiada por mãos humanas.</p>
-
-                                    </div>
-                                    <div class="card-footer">
-                                        <a href="#div3" class="btn btn-success tab-btn" data-target="div3">Saiba
-                                            Mais</a>
-                                    </div>
-                                </div>
-                                <div class="card border border-start-0 border-success border-2">
-                                    <img src="./img/artesa.png"
-                                        class="card-img-top border-bottom border-success border-5" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Trabalhos Manuais</h5>
-                                        <p class="card-text">Impressoras 3D e softwares de design já mudam a forma de
-                                            criar, mas há algo insubstituível no feito à mão: autenticidade e
-                                            sensibilidade. Em meio à automação, cresce o valor do artesanato, da
-                                            marcenaria e da arte como expressão única da criatividade humana, que
-                                            nenhuma máquina é capaz de replicar.</p>
-
-                                    </div>
-                                    <div class="card-footer">
-                                        <a href="#div4" class="btn btn-success tab-btn" data-target="div4">Saiba
-                                            Mais</a>
+                            <h3 class="text-center my-4 text-success">Menos Afetadas</h3>
+                            <div class="row g-3 justify-content-center">
+                                <div class="col-12 col-md-6">
+                                    <div class="card border border-success border-2 h-100">
+                                        <img src="./img/mestre.png"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Mestre de Obras</h5>
+                                            <p class="card-text">Na construção civil, drones inspecionam, softwares preveem
+                                                atrasos e sensores monitoram tudo. Mas isso não elimina o papel do mestre de
+                                                obras. Pelo contrário: sua liderança, experiência e capacidade de decisão
+                                                tornam-se ainda mais estratégicas em um cenário onde a tecnologia precisa
+                                                ser guiada por mãos humanas.</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="#div3" class="btn btn-success tab-btn" data-target="div3">Saiba
+                                                Mais</a>
+                                        </div>
                                     </div>
                                 </div>
-
+                                <div class="col-12 col-md-6">
+                                    <div class="card border border-success border-2 h-100">
+                                        <img src="./img/artesa.png"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Trabalhos Manuais</h5>
+                                            <p class="card-text">Impressoras 3D e softwares de design já mudam a forma de
+                                                criar, mas há algo insubstituível no feito à mão: autenticidade e
+                                                sensibilidade. Em meio à automação, cresce o valor do artesanato, da
+                                                marcenaria e da arte como expressão única da criatividade humana, que
+                                                nenhuma máquina é capaz de replicar.</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="#div4" class="btn btn-success tab-btn" data-target="div4">Saiba
+                                                Mais</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
@@ -543,10 +577,10 @@
 
                     <h2 class="my-4 text-center text-primary">Simulador de Impacto da IA na sua Profissão</h2>
 
-                    <form id="iaForm" class="rounded border border-2 border-primary p-4">
+                    <form id="iaForm" class="p-4">
 
                         <div class="mb-3">
-                            <label class="form-label fw-bold"><span class="badge text-bg-primary">1</span> Sua profissão
+                            <label class="form-label fw-bold text-primary"><span class="badge bg-primary-badge  text-white">1</span> Sua profissão
                                 envolve mais tarefas repetitivas ou criativas?</label>
                             <select class="form-select" name="q1" required>
                                 <option value="">Selecione...</option>
@@ -557,7 +591,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label fw-bold"><span class="badge text-bg-primary">2</span> Em que medida
+                            <label class="form-label fw-bold text-primary"><span class="badge bg-primary-badge  text-white">2</span> Em que medida
                                 seu
                                 trabalho depende da análise de dados, relatórios ou documentos?</label>
                             <select class="form-select" name="q2" required>
@@ -569,7 +603,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label fw-bold"><span class="badge text-bg-primary">3</span> As principais
+                            <label class="form-label fw-bold text-primary"><span class="badge bg-primary-badge text-white">3</span> As principais
                                 tarefas
                                 da sua profissão já podem ser feitas, total ou parcialmente, por softwares ou
                                 IA?</label>
@@ -582,7 +616,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label fw-bold"><span class="badge text-bg-primary">4</span> O contato
+                            <label class="form-label fw-bold text-primary"><span class="badge bg-primary-badge  text-white">4</span> O contato
                                 humano e a
                                 relação interpessoal são essenciais para o desempenho do seu trabalho?</label>
                             <select class="form-select" name="q4" required>
@@ -594,7 +628,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label fw-bold"><span class="badge text-bg-primary">5</span> Você já
+                            <label class="form-label fw-bold text-primary"><span class="badge bg-primary-badge  text-white">5</span> Você já
                                 utiliza
                                 ferramentas de IA (como ChatGPT, MidJourney, Copilot, etc.) no seu dia a dia
                                 profissional?</label>
@@ -607,7 +641,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label fw-bold"><span class="badge text-bg-primary">6</span> Sua profissão
+                            <label class="form-label fw-bold text-primary"><span class="badge bg-primary-badge  text-white">6</span> Sua profissão
                                 exige
                                 atualização constante de conhecimento e adaptação a novas tecnologias?</label>
                             <select class="form-select" name="q6" required>
@@ -619,7 +653,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label fw-bold"><span class="badge text-bg-primary">7</span> Você acredita
+                            <label class="form-label fw-bold text-primary"><span class="badge bg-primary-badge  text-white">7</span> Você acredita
                                 que a IA
                                 será mais uma ferramenta de apoio ou uma ameaça de substituição no seu setor?</label>
                             <select class="form-select" name="q7" required>
@@ -693,7 +727,7 @@
                     </div>
                 </div>
             </section>
-        </div>
+        </di>
 
 
         <section id="referencias" class="my-5 py-4 ">
