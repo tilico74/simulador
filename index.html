@@ -7,7 +7,7 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
@@ -21,6 +21,7 @@
         --bg-4: #41A3DC;
         --bg-5: #3DA9BE;
         --bg-6: #CBCBAF;
+        --bg-7: #E0E0E0;
 
         /* textos claros */
         --tx-white: #FFFFFF;
@@ -47,6 +48,16 @@
         .bg-primary-badge {
             background-color: var(--bg-3) !important;
         }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+
+        color: var(--bg-1);
     }
 
     .card-footer {
@@ -87,7 +98,7 @@
     }
 
     .footer {
-        background: var(--tx-white-soft);
+        background: var(--bg-7);
         color: var(--tx-white-muted);
         color: var(--bg-1);
     }
@@ -108,6 +119,7 @@
 
     a {
         text-decoration: none;
+        color: var(--bg-3);
     }
 
     /* Flip card equipe */
@@ -142,6 +154,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        border: 3px solid var(--bg-1);
+        box-shadow: #101111 0px 3px 8px;
     }
 
     .flip-card-front img {
@@ -160,6 +174,10 @@
         font-size: 1rem;
         border: 2px solid var(--bg-4);
     }
+
+    #simulador {
+        background-color: var(--tx-white-muted);
+    }
 </style>
 
 <body>
@@ -174,19 +192,20 @@
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#inicio">Início</a>
+                            <a class="nav-link active" aria-current="page" href="#inicio"><i
+                                    class="bi bi-house-door"></i> Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#profissoes">Profissões</a>
+                            <a class="nav-link" href="#profissoes"><i class="bi bi-person-gear"></i> Profissões</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#simulador">Simulador</a>
+                            <a class="nav-link" href="#simulador"><i class="bi bi-card-checklist"></i> Simulador</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#equipe">Equipe</a>
+                            <a class="nav-link" href="#equipe"><i class="bi bi-people-fill"></i> Equipe</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#referencias">Referências</a>
+                            <a class="nav-link" href="#referencias"><i class="bi bi-journal-text"></i> Referências</a>
                         </li>
                     </ul>
                 </div>
@@ -248,11 +267,13 @@
                 <div class="container">
 
 
-                    <h2 class="text-center">Como as profissões serão afetadas por
+                    <h2 class="my-4 text-center"><i class="bi bi-person-gear fs-1"></i> Como as profissões serão
+                        afetadas por
                         Inteligência Artificial</h2>
                     <div class=" row text-center">
                         <div class="col-md-6">
-                            <h3 class="text-center my-4 text-danger">Mais Afetadas</h3>
+                            <h3 class="text-center my-4 text-danger"><i class="bi bi-plus-square"></i> Mais Afetadas
+                            </h3>
                             <div class="row g-3 justify-content-center">
                                 <div class="col-12 col-md-6">
                                     <div class="card border border-danger border-2 h-100">
@@ -296,7 +317,8 @@
 
                         </div>
                         <div class="col-md-6">
-                            <h3 class="text-center my-4 text-success">Menos Afetadas</h3>
+                            <h3 class="text-center my-4 text-success"><i class="bi bi-dash-square"></i> Menos Afetadas
+                            </h3>
                             <div class="row g-3 justify-content-center">
                                 <div class="col-12 col-md-6">
                                     <div class="card border border-success border-2 h-100">
@@ -632,7 +654,8 @@
 
                 <div class="container">
 
-                    <h2 class="my-4 text-center text-primary">Simulador de Impacto da IA na sua Profissão</h2>
+                    <h2 class="my-4 text-center"><i class="bi bi-card-checklist fs-1"></i> Simulador de Impacto
+                        da IA na sua Profissão</h2>
 
                     <form id="iaForm" class="p-4">
 
@@ -730,7 +753,7 @@
 
                         <div class="text-center">
                             <button type="submit" class="btn bg-primary-badge text-white">Calcular Impacto</button>
-                            <button type="button" id="resetBtn" class="btn btn-secondary">Limpar</button>
+                            <button type="button" id="resetBtn" class="btn btn-outline-secondary">Limpar</button>
                         </div>
                         <div class=" text-center">
                             <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -757,7 +780,8 @@
 
             <section id="equipe" class="my-5 py-4">
                 <div class="container">
-                    <h2 class="text-center">Equipe de Desenvolvimento</h2>
+                    <h2 class="my-4 text-center"><i class="bi bi-people-fill fs-1"></i> Equipe de Desenvolvimento</h2>
+
                     <div class="row text-center">
                         <div class="col-md">
                             <div class="flip-card">
@@ -840,7 +864,7 @@
 
             <section id="referencias" class="my-5 py-4 ">
                 <div class="container">
-                    <h2 class="text-center">Referências Bibliográficas</h2>
+                    <h2 class="my-4 text-center"><i class="bi bi-journal-text fs-1"></i> Referências Bibliográficas</h2>
 
                     <ol>
                         <li>
@@ -957,8 +981,8 @@
     <footer class="footer">
         <div class="container text-center py-3">
             <div class="row">
-                <div class="col"><a href="https://github.com/tilico74/simulador" target="_blank"><img
-                            src="./img/logo_github.png" alt=""></a></div>
+                <div class="col"><a href="https://github.com/Projeto-Profissoes-IA/profissoesfuturoia"
+                        target="_blank"><img src="./img/logo_github.png" alt=""></a></div>
                 <div class="col"><a href="https://www.jovemprogramador.com.br/" target="_blank"><img
                             src="./img/logo_jovem_programador.png" alt=""></a>
                 </div>
@@ -1019,11 +1043,11 @@
                         <div class="alert alert-info">
                             <strong>Interpretação dos resultados:</strong><br>
                             <ul class="mb-0">
-                                <li><span class="text-success">0% – 33%:</span> Baixo impacto (profissão com baixa
+                                <li><span class="text-success">0% - 33%:</span> Baixo impacto (profissão com baixa
                                     probabilidade de automação)</li>
-                                <li><span class="text-warning">34% – 66%:</span> Médio impacto (possível automação
+                                <li><span class="text-warning">34% - 66%:</span> Médio impacto (possível automação
                                     parcial das tarefas)</li>
-                                <li><span class="text-danger">67% – 100%:</span> Alto impacto (elevada probabilidade de
+                                <li><span class="text-danger">67% - 100%:</span> Alto impacto (elevada probabilidade de
                                     substituição ou transformação profunda)</li>
                             </ul>
                         </div>
