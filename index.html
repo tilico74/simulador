@@ -8,42 +8,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <style>
-    .card-footer {
-        border-top: none;
+    body {
+        font-family: 'Roboto', sans-serif;
     }
 
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #f4f6fb, #e9eef7);
-        color: #333;
+    .card-footer {
+        border-top: none;
     }
 
     .navbar {
         background: rgba(2, 2, 25, 0.85) !important;
         backdrop-filter: blur(8px);
-    }
-
-    .navbar-brand {
-        font-weight: bold;
-        letter-spacing: 1px;
-    }
-
-    .carousel-caption h1 {
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-        font-weight: 700;
-    }
-
-    section {
-        border-radius: 16px;
-        margin-bottom: 40px;
-    }
-
-    #profissoes {
-        background: linear-gradient(180deg, #ffffff, #f7faff);
-        border-radius: 20px;
-        padding: 40px 20px;
     }
 
     .card {
@@ -55,29 +35,8 @@
     }
 
     .card:hover {
-        transform: translateY(-5px);
+        transform: translateY(-3px);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .card img {
-        border-bottom: 4px solid #0d6efd;
-    }
-
-    .btn {
-        border-radius: 30px;
-        padding: 10px 20px;
-        font-weight: 500;
-        transition: all 0.3s ease;
-    }
-
-    .btn-primary:hover {
-        background-color: #0056d2;
-        transform: scale(1.05);
-    }
-
-    #simulador {
-        background: linear-gradient(135deg, #e0f7fa, #e3f2fd);
-        border-radius: 20px;
     }
 
     #resultContainer .progress {
@@ -86,8 +45,6 @@
     }
 
     #equipe img {
-        width: 120px;
-        height: 120px;
         object-fit: cover;
         border-radius: 50%;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -99,9 +56,8 @@
     }
 
     .footer {
-        background: #0d1b2a;
+        background: #626365;
         color: #fff;
-        font-size: 0.9rem;
     }
 
     .tab-content {
@@ -138,9 +94,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#equipe">Equipe</a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="#referencias">Referências</a>
+                        </li>
                     </ul>
-
                 </div>
             </div>
 
@@ -200,14 +157,15 @@
                 <div class="container">
 
 
-                    <h2 class="text-center alert alert-primary" role="alert">Como as profissões serão afetadas por
+                    <h2 class="text-center">Como as profissões serão afetadas por
                         Inteligência Artificial</h2>
                     <div class=" row text-center">
                         <div class="col-md-6">
-                            <h2 class="text-center my-4">Mais afetadas</h2>
+                            <h2 class="text-center my-4 text-danger">Mais Afetadas</h2>
                             <div class="card-group">
-                                <div class="card">
-                                    <img src="./img/contador.jfif" class="card-img-top" alt="...">
+                                <div class="card border border-end-0 border-danger border-2">
+                                    <img src="./img/contador.jfif"
+                                        class="card-img-top border-bottom border-danger border-5" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">Contador</h5>
                                         <p class="card-text">Softwares de IA já categorizam lançamentos, analisam
@@ -218,11 +176,13 @@
 
                                     </div>
                                     <div class="card-footer">
-                                        <input value="Leia Mais" class="btn btn-primary tab-btn" data-target="div1">
+                                        <a href="#div1" class="btn btn-danger tab-btn" data-target="div1">Saiba
+                                            Mais</a>
                                     </div>
                                 </div>
-                                <div class="card">
-                                    <img src="./img/libras-1b.jpg" class="card-img-top" alt="...">
+                                <div class="card border border-start-0 border-danger border-2">
+                                    <img src="./img/libras-1b.jpg"
+                                        class="card-img-top border-bottom border-danger border-5" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">Interprete de Libras</h5>
                                         <p class="card-text">Aplicativos de tradução em tempo real levantam uma questão:
@@ -233,17 +193,19 @@
 
                                     </div>
                                     <div class="card-footer">
-                                        <input value="Leia Mais" class="btn btn-primary tab-btn" data-target="div2">
+                                        <a href="#div2" class="btn btn-danger tab-btn" data-target="div2">Saiba
+                                            Mais</a>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
                         <div class="col-md-6">
-                            <h2 class="text-center my-4">Menos afetadas</h2>
+                            <h2 class="text-center my-4 text-success">Menos Afetadas</h2>
                             <div class="card-group">
-                                <div class="card">
-                                    <img src="./img/mestre.png" class="card-img-top" alt="...">
+                                <div class="card  border border-end-0 border-success border-2">
+                                    <img src="./img/mestre.png"
+                                        class="card-img-top border-bottom border-success border-5" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">Mestre de Obras</h5>
                                         <p class="card-text">Na construção civil, drones inspecionam, softwares preveem
@@ -254,11 +216,13 @@
 
                                     </div>
                                     <div class="card-footer">
-                                        <input value="Leia Mais" class="btn btn-primary tab-btn" data-target="div3">
+                                        <a href="#div3" class="btn btn-success tab-btn" data-target="div3">Saiba
+                                            Mais</a>
                                     </div>
                                 </div>
-                                <div class="card">
-                                    <img src="./img/artesa.png" class="card-img-top" alt="...">
+                                <div class="card border border-start-0 border-success border-2">
+                                    <img src="./img/artesa.png"
+                                        class="card-img-top border-bottom border-success border-5" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">Trabalhos Manuais</h5>
                                         <p class="card-text">Impressoras 3D e softwares de design já mudam a forma de
@@ -269,7 +233,8 @@
 
                                     </div>
                                     <div class="card-footer">
-                                        <input value="Leia Mais" class="btn btn-primary tab-btn" data-target="div4">
+                                        <a href="#div4" class="btn btn-success tab-btn" data-target="div4">Saiba
+                                            Mais</a>
                                     </div>
                                 </div>
 
@@ -278,171 +243,293 @@
                         </div>
 
                     </div>
-                    <div id="div1" class="bg-danger tab-content">
-                        <h3 class="text-center my-4">Contabilidade e Inteligência Artificial: Transformação em
-                            Curso
-                        </h3>
-                        <p>A contabilidade está entre as áreas mais impactadas — e beneficiadas — pelo avanço da
-                            inteligência artificial (IA). Ferramentas inteligentes vêm revolucionando rotinas, reduzindo
-                            erros e aumentando a produtividade dos profissionais da área.</p>
-                        <p>Em 2025, essa transformação tende a se tornar ainda mais intensa. Os contadores tiveram (e
-                            continuarão tendo) que se adaptar ao uso de novas tecnologias que automatizam tarefas
-                            repetitivas, identificam padrões e aprendem continuamente com os dados inseridos.</p>
-                        <p>Softwares modernos já são capazes de:
-                        <ul>
-                            <li> <strong>Sugerir categorias contábeis</strong> para lançamentos bancários com base no
-                                histórico de
-                                transações;</li>
-                            <li><strong>Emitir alertas de riscos fiscais</strong>, evitando que situações críticas
-                                passem despercebidas;
-                            </li>
-                            <li><strong>Ler e importar automaticamente documentos fiscais</strong>, como notas
-                                eletrônicas, por meio de
-                                plataformas como a Arquivei, economizando horas de trabalho manual;
-                            </li>
-                            <li><strong>Classificar automaticamente lançamentos</strong> financeiros a partir do acesso
-                                direto às contas
-                                bancárias dos clientes;</li>
-                            <li><strong>Analisar riscos e mudanças na legislação</strong>, recomendando ajustes para
-                                manter a empresa em
-                                conformidade.</li>
-                        </ul>
-                        </p>
-                        <p>O ganho de produtividade é significativo. Com menos tempo gasto em tarefas operacionais, o
-                            contador pode focar em atividades mais estratégicas, como consultoria tributária,
-                            planejamento financeiro e tomada de decisão baseada em dados.</p>
-                        <p>Além disso, a IA oferece uma visão mais analítica e integrada da situação financeira das
-                            empresas. Com o cruzamento de informações de diferentes fontes, os sistemas geram relatórios
-                            personalizados que apontam tendências, riscos e oportunidades de forma clara e rápida.</p>
-                        <p>No entanto, é fundamental destacar a importância da <strong>segurança cibernética</strong>,
-                            especialmente no
-                            que diz respeito ao tratamento de dados sensíveis dos clientes. O uso de IA deve caminhar
-                            lado a lado com políticas robustas de proteção da informação.</p>
-                        <p>Por fim, os profissionais da contabilidade precisam desenvolver uma mentalidade de
-                            aprendizado contínuo. A atualização constante — já exigida pelas mudanças frequentes nas
-                            legislações fiscais — torna-se ainda mais essencial neste novo cenário tecnológico.</p>
-                        <p>A inteligência artificial já é uma realidade no mundo contábil. Cabe ao contador evoluir
-                            junto com ela e aproveitar ao máximo as oportunidades que essa revolução oferece.</p>
 
-                        <input type="button" value="Fechar" class="btn btn-primary tab-btn" data-target="div1">
-                    </div>
 
-                    <div id="div2" class="bg-success tab-content">
-                        <h3 class="text-center my-4">Intérpretes de Libras x Inteligência Artificial: ameaça ou
-                            transformação?
-                        </h3>
 
-                        <p>A profissão de intérprete de Libras sempre foi um elo essencial entre mundos: o da comunidade
-                            surda e o da sociedade ouvinte. Com sensibilidade, contexto cultural e habilidade
-                            linguística, esses profissionais fazem mais do que traduzir palavras, eles traduzem
-                            sentidos, intenções e emoções.</p>
-                        <p>Mas surge a pergunta que inquieta: a inteligência artificial pode substituir os intérpretes
-                            humanos?</p>
-                        <p>Nos últimos anos, vimos aplicativos e softwares de tradução em tempo real ganhando destaque,
-                            prometendo transformar voz em Libras e vice-versa em questão de segundos. A promessa é
-                            tentadora: acessibilidade em qualquer lugar, a qualquer hora. No entanto, apesar do avanço
-                            tecnológico, a IA ainda tropeça em nuances culturais, expressões idiomáticas e,
-                            principalmente, no aspecto humano da comunicação. A Libras, como qualquer língua, vai além
-                            de sinais mecânicos, envolve expressões faciais, entonação corporal e contexto social que
-                            nenhuma máquina domina com naturalidade.</p>
-                        <p>Portanto, embora a inteligência artificial seja uma ferramenta poderosa e esteja destinada a
-                            se tornar uma aliada indispensável, ela não deve extinguir a profissão. Pelo contrário: os
-                            intérpretes de Libras tendem a ganhar ainda mais relevância, atuando em situações complexas,
-                            em contextos de maior responsabilidade (como tribunais, hospitais ou eventos oficiais) e
-                            também no treinamento e supervisão das próprias tecnologias de acessibilidade.</p>
-                        <p>Se há um risco, ele não é o de desaparecer, mas o de se transformar. Assim como em outras
-                            áreas, os intérpretes precisarão se reinventar, dominando novas ferramentas e ocupando
-                            espaços estratégicos onde a presença humana é insubstituível.</p>
-                        <p>Em resumo, o futuro aponta para uma parceria: máquinas ampliando o acesso, e intérpretes
-                            garantindo a qualidade e humanidade da comunicação. Afinal, nenhuma inteligência artificial
-                            consegue traduzir um olhar acolhedor ou a sensibilidade de estar ao lado de quem precisa ser
-                            ouvido.</p>
+                    <div id="div1" class="card tab-content mt-5 bg-danger-subtle">
+                        <div class="card-header d-flex justify-content-end">
+                            <a class="btn-close hide-btn" data-target="div1" href="#profissoes"></a>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="text-center card-title">Contabilidade e Inteligência Artificial:
+                                Transformação em
+                                Curso
+                            </h3>
+                            <p>A contabilidade está entre as áreas mais impactadas — e beneficiadas —
+                                pelo avanço da
+                                inteligência artificial (IA). Ferramentas inteligentes vêm revolucionando rotinas,
+                                reduzindo
+                                erros e aumentando a produtividade dos profissionais da área.</p>
+                            <p>Em 2025, essa transformação tende a se tornar ainda mais intensa. Os contadores
+                                tiveram
+                                (e
+                                continuarão tendo) que se adaptar ao uso de novas tecnologias que automatizam
+                                tarefas
+                                repetitivas, identificam padrões e aprendem continuamente com os dados inseridos.
+                            </p>
+                            <p>Softwares modernos já são capazes de:
+                            <ul>
+                                <li> <strong>Sugerir categorias contábeis</strong> para lançamentos bancários com
+                                    base
+                                    no
+                                    histórico de
+                                    transações;</li>
+                                <li><strong>Emitir alertas de riscos fiscais</strong>, evitando que situações
+                                    críticas
+                                    passem despercebidas;
+                                </li>
+                                <li><strong>Ler e importar automaticamente documentos fiscais</strong>, como notas
+                                    eletrônicas, por meio de
+                                    plataformas como a Arquivei, economizando horas de trabalho manual;
+                                </li>
+                                <li><strong>Classificar automaticamente lançamentos</strong> financeiros a partir do
+                                    acesso
+                                    direto às contas
+                                    bancárias dos clientes;</li>
+                                <li><strong>Analisar riscos e mudanças na legislação</strong>, recomendando ajustes
+                                    para
+                                    manter a empresa em
+                                    conformidade.</li>
+                            </ul>
+                            </p>
+                            <p>O ganho de produtividade é significativo. Com menos tempo gasto em tarefas
+                                operacionais,
+                                o
+                                contador pode focar em atividades mais estratégicas, como consultoria tributária,
+                                planejamento financeiro e tomada de decisão baseada em dados.</p>
+                            <p>Além disso, a IA oferece uma visão mais analítica e integrada da situação financeira
+                                das
+                                empresas. Com o cruzamento de informações de diferentes fontes, os sistemas geram
+                                relatórios
+                                personalizados que apontam tendências, riscos e oportunidades de forma clara e
+                                rápida.
+                            </p>
+                            <p>No entanto, é fundamental destacar a importância da <strong>segurança
+                                    cibernética</strong>,
+                                especialmente no
+                                que diz respeito ao tratamento de dados sensíveis dos clientes. O uso de IA deve
+                                caminhar
+                                lado a lado com políticas robustas de proteção da informação.</p>
+                            <p>Por fim, os profissionais da contabilidade precisam desenvolver uma mentalidade de
+                                aprendizado contínuo. A atualização constante — já exigida pelas mudanças frequentes
+                                nas
+                                legislações fiscais — torna-se ainda mais essencial neste novo cenário tecnológico.
+                            </p>
+                            <p>A inteligência artificial já é uma realidade no mundo contábil. Cabe ao contador
+                                evoluir
+                                junto com ela e aproveitar ao máximo as oportunidades que essa revolução oferece.
+                            </p>
 
-                    </div>
 
-                    <div id="div3" class="bg-warning tab-content">
-                        <h3 class="text-center my-4">O Mestre de Obras e a Inteligência Artificial
-                        </h3>
-                        <h4 class="text-center">Parceria que Transforma a Construção Civil </h4>
-                        <p>A profissão de mestre de obras é uma das mais estratégicas na construção civil. Ele atua como
-                            líder no canteiro de obras, coordenando equipes, acompanhando o uso de materiais, garantindo
-                            a execução correta dos projetos e zelando pela segurança e pelos prazos.</p>
-                        <p>Com o avanço da inteligência artificial (IA), diversas tarefas repetitivas e operacionais
-                            estão sendo automatizadas, trazendo mais eficiência para o setor. Veja algumas aplicações
-                            que já estão transformando o dia a dia das obras:</p>
-                        <p>
-                        <ul>
-                            <li>Planejamento inteligente: softwares de gestão conseguem criar cronogramas otimizados,
-                                prever atrasos e distribuir recursos de forma mais eficiente.</li>
-                            <li>Inspeções com drones: drones equipados com IA realizam inspeções em tempo real,
-                                identificando falhas estruturais e riscos de segurança antes que se tornem problemas
-                                graves. </li>
-                            <li>Sensores inteligentes: monitoram o consumo de água, energia e materiais, gerando
-                                relatórios instantâneos que ajudam a tornar a obra mais sustentável. </li>
-                            <li>Análise de riscos: sistemas automatizados conseguem prever impactos de mudanças
-                                climáticas, problemas logísticos e outros imprevistos, oferecendo alternativas rápidas.
-                            </li>
-                        </ul>
-                        </p>
-                        <p>Apesar dessas inovações, o papel do mestre de obras continua essencial. A liderança no campo,
-                            a experiência prática e a capacidade de tomar decisões rápidas diante de situações
-                            inesperadas são habilidades humanas que a IA ainda não substitui.</p>
-                        <p>O futuro da profissão aponta para um perfil mais tecnológico e estratégico. O mestre de obras
-                            que souber usar a IA como aliada terá mais controle, produtividade e qualidade em suas
-                            entregas.</p>
-                        <p class="text-center">
-                            <strong>
-                                “Mesmo com a tecnologia no canteiro de obras, a liderança humana continua sendo a
-                                base da construção.”
-                            </strong>
-                        </p>
+
+                            <div class="card-footer text-center">
+                                <a class=" btn btn-danger hide-btn" data-target="div1" href="#profissoes">Fechar</a>
+
+                            </div>
+
+                        </div>
 
                     </div>
-                    <div id="div4" class="bg-info tab-content">
-                        <h3 class="text-center my-4">Trabalhos Manuais</h3>
-                        <h4 class="text-center"> Criatividade Humana em Tempos de Inteligência Artificial</h4>
-                        <p>Profissões ligadas aos trabalhos manuais — como artesanato, marcenaria, cerâmica, costura,
-                            escultura e pintura — representam a expressão direta da criatividade humana. São atividades
-                            que envolvem sensibilidade, técnica e cultura, transformando matérias-primas em peças únicas
-                            e carregadas de significado.</p>
-                        <p>Com o avanço da inteligência artificial (IA) e das tecnologias digitais, esse campo também
-                            passou por mudanças importantes. Ferramentas modernas estão otimizando processos e ampliando
-                            possibilidades de criação. Entre as principais inovações, destacam-se: </p>
-                        <p>
-                        <ul>
-                            <li>Impressoras 3D e corte a laser: permitem produzir objetos com precisão e agilidade,
-                                reduzindo o tempo de execução de peças que antes exigiam dias de trabalho manual.</li>
-                            <li>Softwares de design com IA: auxiliam na criação de modelos e protótipos, acelerando
-                                etapas do processo criativo.</li>
-                            <li>Plataformas de e-commerce com algoritmos inteligentes: conectam artesãos e consumidores
-                                de forma mais eficiente, personalizando recomendações e ampliando o alcance das vendas.
-                            </li>
-                        </ul>
-                        </p>
-                        <p>Apesar dessas transformações, os trabalhos manuais não estão entre as profissões ameaçadas
-                            pela IA. Ao contrário: em um mundo cada vez mais automatizado, cresce a valorização do feito
-                            à mão como símbolo de autenticidade, exclusividade e conexão humana. Produtos artesanais
-                            carregam identidade cultural e emocional — atributos que a inteligência artificial ainda não
-                            consegue replicar plenamente. </p>
-                        <p>Caminhos para o futuro:
-                        <ul>
-                            <li>Tecnologia como aliada: profissionais que incorporam ferramentas digitais ao processo
-                                criativo ganham em produtividade sem perder a originalidade.</li>
-                            <li>Valorização do humano: a demanda por peças autorais e únicas tende a crescer, destacando
-                                o papel insubstituível da sensibilidade e da expressão individual.</li>
-                        </ul>
-                        </p>
-                        <p class="text-center">
-                            <strong>
-                                “Em um mundo automatizado, o toque humano é o que torna cada criação verdadeiramente
-                                única.”
-                            </strong>
-                        </p>
+
+
+
+                    <div id="div2" class="card bg-success tab-content mt-5 bg-danger-subtle">
+                        <div class="card-header d-flex justify-content-end">
+                            <a class="btn-close hide-btn" data-target="div2" href="#profissoes"></a>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="text-center">Intérpretes de Libras x Inteligência Artificial: ameaça ou
+                                transformação?
+                            </h3>
+
+                            <p>A profissão de intérprete de Libras sempre foi um elo essencial entre mundos: o da
+                                comunidade
+                                surda e o da sociedade ouvinte. Com sensibilidade, contexto cultural e habilidade
+                                linguística, esses profissionais fazem mais do que traduzir palavras, eles traduzem
+                                sentidos, intenções e emoções.</p>
+                            <p>Mas surge a pergunta que inquieta: a inteligência artificial pode substituir os
+                                intérpretes
+                                humanos?</p>
+                            <p>Nos últimos anos, vimos aplicativos e softwares de tradução em tempo real ganhando
+                                destaque,
+                                prometendo transformar voz em Libras e vice-versa em questão de segundos. A promessa
+                                é
+                                tentadora: acessibilidade em qualquer lugar, a qualquer hora. No entanto, apesar do
+                                avanço
+                                tecnológico, a IA ainda tropeça em nuances culturais, expressões idiomáticas e,
+                                principalmente, no aspecto humano da comunicação. A Libras, como qualquer língua,
+                                vai
+                                além
+                                de sinais mecânicos, envolve expressões faciais, entonação corporal e contexto
+                                social
+                                que
+                                nenhuma máquina domina com naturalidade.</p>
+                            <p>Portanto, embora a inteligência artificial seja uma ferramenta poderosa e esteja
+                                destinada a
+                                se tornar uma aliada indispensável, ela não deve extinguir a profissão. Pelo
+                                contrário:
+                                os
+                                intérpretes de Libras tendem a ganhar ainda mais relevância, atuando em situações
+                                complexas,
+                                em contextos de maior responsabilidade (como tribunais, hospitais ou eventos
+                                oficiais) e
+                                também no treinamento e supervisão das próprias tecnologias de acessibilidade.</p>
+                            <p>Se há um risco, ele não é o de desaparecer, mas o de se transformar. Assim como em
+                                outras
+                                áreas, os intérpretes precisarão se reinventar, dominando novas ferramentas e
+                                ocupando
+                                espaços estratégicos onde a presença humana é insubstituível.</p>
+                            <p>Em resumo, o futuro aponta para uma parceria: máquinas ampliando o acesso, e
+                                intérpretes
+                                garantindo a qualidade e humanidade da comunicação. Afinal, nenhuma inteligência
+                                artificial
+                                consegue traduzir um olhar acolhedor ou a sensibilidade de estar ao lado de quem
+                                precisa
+                                ser
+                                ouvido.</p>
+                            <div class="card-footer text-center">
+                                <a class=" btn btn-danger hide-btn" data-target="div2" href="#profissoes">Fechar</a>
+                            </div>
+                        </div>
                     </div>
+
+                    <div id="div3" class="card tab-content mt-5 bg-success-subtle">
+                        <div class="card-header d-flex justify-content-end">
+                            <a class="btn-close hide-btn" data-target="div3" href="#profissoes"></a>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="text-center my-4">O Mestre de Obras e a Inteligência Artificial
+                            </h3>
+                            <h4 class="text-center">Parceria que Transforma a Construção Civil </h4>
+                            <p>A profissão de mestre de obras é uma das mais estratégicas na construção civil. Ele
+                                atua
+                                como
+                                líder no canteiro de obras, coordenando equipes, acompanhando o uso de materiais,
+                                garantindo
+                                a execução correta dos projetos e zelando pela segurança e pelos prazos.</p>
+                            <p>Com o avanço da inteligência artificial (IA), diversas tarefas repetitivas e
+                                operacionais
+                                estão sendo automatizadas, trazendo mais eficiência para o setor. Veja algumas
+                                aplicações
+                                que já estão transformando o dia a dia das obras:</p>
+                            <p>
+                            <ul>
+                                <li>Planejamento inteligente: softwares de gestão conseguem criar cronogramas
+                                    otimizados,
+                                    prever atrasos e distribuir recursos de forma mais eficiente.</li>
+                                <li>Inspeções com drones: drones equipados com IA realizam inspeções em tempo real,
+                                    identificando falhas estruturais e riscos de segurança antes que se tornem
+                                    problemas
+                                    graves. </li>
+                                <li>Sensores inteligentes: monitoram o consumo de água, energia e materiais, gerando
+                                    relatórios instantâneos que ajudam a tornar a obra mais sustentável. </li>
+                                <li>Análise de riscos: sistemas automatizados conseguem prever impactos de mudanças
+                                    climáticas, problemas logísticos e outros imprevistos, oferecendo alternativas
+                                    rápidas.
+                                </li>
+                            </ul>
+                            </p>
+                            <p>Apesar dessas inovações, o papel do mestre de obras continua essencial. A liderança
+                                no
+                                campo,
+                                a experiência prática e a capacidade de tomar decisões rápidas diante de situações
+                                inesperadas são habilidades humanas que a IA ainda não substitui.</p>
+                            <p>O futuro da profissão aponta para um perfil mais tecnológico e estratégico. O mestre
+                                de
+                                obras
+                                que souber usar a IA como aliada terá mais controle, produtividade e qualidade em
+                                suas
+                                entregas.</p>
+                            <p class="text-center">
+                                <strong>
+                                    “Mesmo com a tecnologia no canteiro de obras, a liderança humana continua sendo
+                                    a
+                                    base da construção.”
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a class=" btn btn-success hide-btn" data-target="div3" href="#profissoes">Fechar</a>
+                        </div>
+                    </div>
+
+
+                    <div id="div4" class="card tab-content mt-5 bg-success-subtle">
+                        <div class="card-header d-flex justify-content-end">
+                            <a class="btn-close hide-btn" data-target="div4" href="#profissoes"></a>
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="text-center my-4">Trabalhos Manuais</h3>
+                            <h4 class="text-center"> Criatividade Humana em Tempos de Inteligência Artificial</h4>
+                            <p>Profissões ligadas aos trabalhos manuais — como artesanato, marcenaria, cerâmica,
+                                costura,
+                                escultura e pintura — representam a expressão direta da criatividade humana. São
+                                atividades
+                                que envolvem sensibilidade, técnica e cultura, transformando matérias-primas em
+                                peças
+                                únicas
+                                e carregadas de significado.</p>
+                            <p>Com o avanço da inteligência artificial (IA) e das tecnologias digitais, esse campo
+                                também
+                                passou por mudanças importantes. Ferramentas modernas estão otimizando processos e
+                                ampliando
+                                possibilidades de criação. Entre as principais inovações, destacam-se: </p>
+                            <p>
+                            <ul>
+                                <li>Impressoras 3D e corte a laser: permitem produzir objetos com precisão e
+                                    agilidade,
+                                    reduzindo o tempo de execução de peças que antes exigiam dias de trabalho
+                                    manual.
+                                </li>
+                                <li>Softwares de design com IA: auxiliam na criação de modelos e protótipos,
+                                    acelerando
+                                    etapas do processo criativo.</li>
+                                <li>Plataformas de e-commerce com algoritmos inteligentes: conectam artesãos e
+                                    consumidores
+                                    de forma mais eficiente, personalizando recomendações e ampliando o alcance das
+                                    vendas.
+                                </li>
+                            </ul>
+                            </p>
+                            <p>Apesar dessas transformações, os trabalhos manuais não estão entre as profissões
+                                ameaçadas
+                                pela IA. Ao contrário: em um mundo cada vez mais automatizado, cresce a valorização
+                                do
+                                feito
+                                à mão como símbolo de autenticidade, exclusividade e conexão humana. Produtos
+                                artesanais
+                                carregam identidade cultural e emocional — atributos que a inteligência artificial
+                                ainda
+                                não
+                                consegue replicar plenamente. </p>
+                            <p>Caminhos para o futuro:
+                            <ul>
+                                <li>Tecnologia como aliada: profissionais que incorporam ferramentas digitais ao
+                                    processo
+                                    criativo ganham em produtividade sem perder a originalidade.</li>
+                                <li>Valorização do humano: a demanda por peças autorais e únicas tende a crescer,
+                                    destacando
+                                    o papel insubstituível da sensibilidade e da expressão individual.</li>
+                            </ul>
+                            </p>
+                            <p class="text-center">
+                                <strong>
+                                    “Em um mundo automatizado, o toque humano é o que torna cada criação
+                                    verdadeiramente
+                                    única.”
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a class=" btn btn-success hide-btn" data-target="div4" href="#profissoes">Fechar</a>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
-            <section id="simulador" class="my-5 py-4 bg-primary-subtle">
+            <section id="simulador" class="my-5 py-4">
 
                 <div class="container">
 
@@ -567,30 +654,36 @@
 
             <section id="equipe" class="my-5 py-4">
                 <div class="container">
-
-
-                    <h2 class="text-center alert alert-primary" role="alert">Equipe de desenvolvimento</h2>
+                    <h2 class="text-center">Equipe de Desenvolvimento</h2>
                     <div class="row text-center">
                         <div class="col-md">
                             <img src="./img/img01.jpg" class="rounded border border-1" alt="...">
-                            <p>Rebeca</p>
+                            <p class="pt-2">Rebeca Araujo Gama</p>
                         </div>
                         <div class="col-md">
                             <img src="./img/img02.jpg" class="rounded border border-2" alt="...">
-                            <p>Jackson</p>
+                            <p class="pt-2">Jackson da Silva Feliciano</p>
                         </div>
                         <div class="col-md">
                             <img src="./img/img04.jpg" class="rounded border border-2" alt="...">
-                            <p>Elisia</p>
+                            <p class="pt-2">Elisia dos Santos Marinho</p>
                         </div>
                         <div class="col-md">
                             <img src="./img/img05.png" class="rounded border border-2" alt="...">
-                            <p>Nicolas</p>
+                            <p class="pt-2">Nicolas Pietro Paglioni</p>
                         </div>
                         <div class="col-md">
                             <img src="./img/img03.jpg" class="rounded border border-2" alt="...">
-                            <p>Nelson</p>
+                            <p class="pt-2">Nelson Cristiano S. Jucoski</p>
                         </div>
+
+                    </div>
+                    <div class="text-center mt-4">
+                        <img src="./img/karina_casola.jfif" class="rounded border border-2" alt="...">
+                        <p class="pt-2">
+                            Prof. Karina Casola Fernandes <br>
+                            <span class="fst-italic">Orientadora</span>
+                        </p>
 
                     </div>
                 </div>
@@ -598,9 +691,110 @@
         </div>
 
 
-        <section>
-            <div>
-                <h2>Referências Bibliográficas</h2>
+        <section id="referencias" class="my-5 py-4 ">
+            <div class="container">
+                <h2 class="text-center">Referências Bibliográficas</h2>
+
+                <ol>
+                    <li>
+                        <a href="https://www.artequefaz.com.br/o-papel-da-ia-no-universo-do-artesanato/" target="_blank"
+                            rel="noopener noreferrer">
+                            <cite>Arte Que Faz - O papel da IA no universo do artesanato</cite>.
+                        </a>
+                        <p>Mostra como a IA está sendo usada para gerar ideias criativas, personalizar produtos e
+                            otimizar
+                            processos artesanais.</p>
+
+                    </li>
+                    <li>
+                        <a href="https://abra.com.br/artigos/inteligencia-artificial-qual-impacto-pode-causar-nas-artes/?utm_source=organico_blog&utm_medium=organico&utm_campaign=artigos&utm_content=utm_manual&utm_term=blog"
+                            target="_blank" rel="noopener noreferrer">
+                            <cite>Academia Brasileira de Arte - Inteligência artificial: qual impacto pode causar nas
+                                artes?</cite>.
+                        </a>
+                        <p>
+                            Discute o uso de IA na criação artística, incluindo ferramentas como Midjourney e DALL·E, e
+                            os
+                            debates sobre autoria e originalidade.
+                        </p>
+                    </li>
+                    <li> <a href="https://anafigueiredo.pt/2023/04/a-inteligencia-artificial-e-o-artesanato/"
+                            target="_blank" rel="noopener noreferrer">
+                            <cite>Ana Figueiredo - A inteligência artificial e o artesanato.</cite>.
+                        </a>
+                        <p>
+                            Explora como a tecnologia pode ser usada em conjunto com a criatividade dos artesãos, sem
+                            substituir o valor do feito à mão.
+                        </p>
+                    </li>
+                    <li>
+                        <a href="hhttps://blog.obraprima.eng.br/como-usar-a-ia-na-gestao-de-obras/" target="_blank"
+                            rel="noopener noreferrer">
+                            <cite>Blog Obra Prima - Como usar a IA na gestão de obras</cite>.
+                        </a>
+                        <p>
+                            Explica como softwares
+                            inteligentes estão sendo usados para prever atrasos, otimizar cronogramas e melhorar a
+                            segurança no canteiro de obras.
+                        </p>
+                    </li>
+                    <li>
+                        <a href="https://construcao.com.br/o-impacto-da-inteligencia-artificial-na-construcao-melhorias-na-eficiencia-e-seguranca/"
+                            target="_blank" rel="noopener noreferrer">
+                            <cite>Construção.com.br - O impacto da inteligência artificial na construção civil</cite>.
+                        </a>
+                        <p>
+                            Detalha aplicações práticas da IA na construção, como drones para inspeção, sensores IoT e
+                            análise preditiva para manutenção.
+                        </p>
+                    </li>
+                    <li>
+                        <a href="https://www.ntcbrasil.com.br/blog/inteligencia-artificial-gestao-obras/#:~:text=O%20papel%20da%20IA%20na,hist%C3%B3ricos%20e%20em%20tempo%20real."
+                            target="_blank" rel="noopener noreferrer">
+                            <cite>NTC Brasil - O papel da inteligência artificial na gestão de obras</cite>.
+                        </a>
+                        <p>
+                            Aborda como a IA está sendo usada para apoiar decisões estratégicas, prever custos e
+                            melhorar a
+                            produtividade no setor.
+                        </p>
+                    </li>
+                    <li>
+                        <a href="https://www.contabilidade-financeira.com.br/contabilidade/ia-na-contabilidade/"
+                            target="_blank" rel="noopener noreferrer">
+                            <cite>Contabilidade Financeira - Trabalho em Contabilidade e IA</cite>.
+                        </a>
+                        <p>
+                            Discute como a inteligência artificial está sendo incorporada ao trabalho contábil,
+                            melhorando
+                            relatórios financeiros e automatizando tarefas repetitivas.
+                        </p>
+                    </li>
+
+                    <li>
+                        <a href="https://forbes.com.br/carreira/2024/09/as-profissoes-que-vao-nascer-e-morrer-com-a-ia/"
+                            target="_blank" rel="noopener noreferrer">
+                            <cite>Forbes Brasil - As profissões que vão nascer e morrer com a ascensão da IA</cite>.
+                        </a>
+                        <p>
+                            Aborda quais profissões poderão surgir ou desaparecer com o avanço da IA, destacando a
+                            necessidade de adaptação e aquisição de novas habilidades no mercado de trabalho.
+                        </p>
+                    </li>
+
+                    <li>
+                        <a href="https://g1.globo.com/trabalho-e-carreira/noticia/2025/08/03/as-40-profissoes-mais-impactadas-pela-inteligencia-artificial-segundo-estudo-da-microsoft.ghtml"
+                            target="_blank" rel="noopener noreferrer">
+                            <cite>G1 – Estudo da Microsoft: As 40 Profissões mais impactadas pela inteligência
+                                artificial</cite>.</a>
+                        <p>
+                            Apresenta um estudo que identifica profissões que serão fortemente afetadas pela IA,
+                            principalmente pelas automações de tarefas repetitivas e uso de tecnologias baseadas em
+                            dados.
+                        </p>
+                    </li>
+
+                </ol>
             </div>
         </section>
 
@@ -610,6 +804,12 @@
 
     <footer class="footer">
         <div class="container text-center py-3">
+            <div class="row">
+                <div class="col"><img src="./img/logo_github.png" alt=""></div>
+                <div class="col"><img src="./img/logo_jovem_programador.png" alt=""></div>
+                <div class="col"><img src="./img/logo_senac.png" alt=""></div>
+                <div class="col"><img src="./img/logo_seprosc.png" alt=""></div>
+            </div>
             <p class="mb-0">&copy; 2024 Nome PROJETO. Todos os direitos reservados.</p>
         </div>
     </footer>
@@ -747,6 +947,18 @@
             });
         });
     </script>
+    <script>
+
+        document.querySelectorAll(".hide-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                const targetId = button.getAttribute("data-target");
+                const targetDiv = document.getElementById(targetId);
+                targetDiv.classList.remove("active");
+            });
+        });
+    </script>
+
+
 
 </body>
 
