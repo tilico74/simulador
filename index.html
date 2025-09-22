@@ -730,18 +730,21 @@
                     </p>
 
 
-                    <form id="iaForm" class="p-4">
+                    <form id="iaForm" class="p-4 needs-validation" novalidate>
 
                         <div class="mb-3">
                             <label class="form-label fw-bold text-primary"><span
                                     class="badge bg-primary-badge  text-white">1</span> Sua profissão
                                 envolve mais tarefas repetitivas ou criativas?</label>
-                            <select class="form-select select-custom" name="q1" required>
+                            <select class="form-select select-custom" name="q1" id="validationCustom01" required>
                                 <option value="">Selecione...</option>
                                 <option value="20">Principalmente repetitivas</option>
                                 <option value="10">Mistas (repetitivas e criativas)</option>
                                 <option value="0">Principalmente criativas</option>
                             </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
                         </div>
 
                         <div class="mb-3">
@@ -749,12 +752,15 @@
                                     class="badge bg-primary-badge  text-white">2</span> Em que medida
                                 seu
                                 trabalho depende da análise de dados, relatórios ou documentos?</label>
-                            <select class="form-select select-custom" name="q2" required>
+                            <select class="form-select select-custom" name="q2" id="validationCustom02" required>
                                 <option value="">Selecione...</option>
                                 <option value="15">Muito</option>
                                 <option value="8">Moderado</option>
                                 <option value="0">Pouco</option>
                             </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
                         </div>
 
                         <div class="mb-3">
@@ -763,12 +769,15 @@
                                 tarefas
                                 da sua profissão já podem ser feitas, total ou parcialmente, por softwares ou
                                 IA?</label>
-                            <select class="form-select select-custom" name="q3" required>
+                            <select class="form-select select-custom" name="q3" id="validationCustom03" required>
                                 <option value="">Selecione...</option>
                                 <option value="25">Sim</option>
                                 <option value="12">Parcialmente</option>
                                 <option value="0">Não</option>
                             </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
                         </div>
 
                         <div class="mb-3">
@@ -776,12 +785,15 @@
                                     class="badge bg-primary-badge  text-white">4</span> O contato
                                 humano e a
                                 relação interpessoal são essenciais para o desempenho do seu trabalho?</label>
-                            <select class="form-select select-custom" name="q4" required>
+                            <select class="form-select select-custom" name="q4" id="validationCustom04" required>
                                 <option value="">Selecione...</option>
                                 <option value="0">Pouco importantes</option>
                                 <option value="7">Moderadamente importantes</option>
                                 <option value="15">Muito importantes</option>
                             </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
                         </div>
 
                         <div class="mb-3">
@@ -790,12 +802,15 @@
                                 utiliza
                                 ferramentas de IA (como ChatGPT, MidJourney, Copilot, etc.) no seu dia a dia
                                 profissional?</label>
-                            <select class="form-select select-custom" name="q5" required>
+                            <select class="form-select select-custom" name="q5" id="validationCustom05" required>
                                 <option value="">Selecione...</option>
                                 <option value="10">Frequentemente</option>
                                 <option value="5">Às vezes</option>
                                 <option value="0">Nunca</option>
                             </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
                         </div>
 
                         <div class="mb-3">
@@ -803,12 +818,15 @@
                                     class="badge bg-primary-badge  text-white">6</span> Sua profissão
                                 exige
                                 atualização constante de conhecimento e adaptação a novas tecnologias?</label>
-                            <select class="form-select select-custom" name="q6" required>
+                            <select class="form-select select-custom" name="q6" id="validationCustom06" required>
                                 <option value="">Selecione...</option>
                                 <option value="5">Muito</option>
                                 <option value="3">Moderadamente</option>
                                 <option value="0">Pouco</option>
                             </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
                         </div>
 
                         <div class="mb-3">
@@ -816,17 +834,19 @@
                                     class="badge bg-primary-badge  text-white">7</span> Você acredita
                                 que a IA
                                 será mais uma ferramenta de apoio ou uma ameaça de substituição no seu setor?</label>
-                            <select class="form-select select-custom" name="q7" required>
+                            <select class="form-select select-custom" name="q7" id="validationCustom07" required>
                                 <option value="">Selecione...</option>
                                 <option value="0">Apenas ferramenta de apoio</option>
                                 <option value="5">Apoio e risco parcial</option>
                                 <option value="10">Grande risco de substituição</option>
                             </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
                         </div>
 
                         <div class="text-center">
                             <button type="submit" class="btn bg-primary-badge text-white">Calcular Impacto</button>
-                            <!--<button type="button" id="resetBtn" class="btn btn-outline-secondary">Limpar</button>-->
                         </div>
                         <div class=" text-center">
                             <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -1178,10 +1198,10 @@
         </div>
     </div>
 
-    <!-- Modal resultado so Dimulador de Impacto -->
+    <!-- Modal resultado so Simulador de Impacto -->
     <div class="modal fade" id="modalresultado" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="staticBackdropLabel"><i class="bi bi-card-checklist fs-1"></i> Sua
@@ -1200,6 +1220,9 @@
                                     style="width: 0%">0%
                                 </div>
                             </div>
+                            <div class="mt-3">
+                                <p id="impactMessage" class="alert"></p>
+                            </div>
                         </div>
                     </section>
 
@@ -1216,9 +1239,36 @@
         crossorigin="anonymous"></script>
 
     <script>
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
 
         document.getElementById("iaForm").addEventListener("submit", function (e) {
             e.preventDefault();
+
+            // Validação Bootstrap
+            if (!this.checkValidity()) {
+                e.stopPropagation();
+                this.classList.add("was-validated");
+                return; // Para aqui se não passou na validação
+            }
+
+            this.classList.add("was-validated"); // marca como validado
 
             let total = 0;
             const formData = new FormData(this);
@@ -1230,6 +1280,7 @@
 
             const resultContainer = document.getElementById("resultContainer");
             const impactBar = document.getElementById("impactBar");
+            const impactMessage = document.getElementById("impactMessage");
 
             // Atualiza largura, texto e aria
             impactBar.style.width = percent + "%";
@@ -1242,25 +1293,38 @@
             // Adiciona cor conforme impacto
             if (percent < 34) {
                 impactBar.classList.add("bg-success");
+                impactMessage.innerHTML = "Boa notícia! Sua profissão está entre as menos impactadas pela Inteligência Artificial. Isso significa que as habilidades humanas, criativas ou práticas do seu trabalho ainda são muito difíceis de substituir por máquinas.";
+                impactMessage.classList.add("alert-success");
             } else if (percent < 67) {
                 impactBar.classList.add("bg-warning");
+                impactMessage.innerHTML = "Atenção! Sua profissão pode passar por mudanças moderadas com a chegada da Inteligência Artificial. Algumas tarefas podem ser automatizadas, mas as competências humanas ainda são essenciais.";
+                impactMessage.classList.add("alert-warning");
             } else {
                 impactBar.classList.add("bg-danger");
+                impactMessage.innerHTML = "Alerta! Sua profissão está entre as mais impactadas pela Inteligência Artificial. Grande parte das funções já pode ser substituída por tecnologias inteligentes. É importante acompanhar as tendências e buscar adaptação.";
+                impactMessage.classList.add("alert-danger");
             }
 
             resultContainer.style.display = "block";
+
 
             // Abre o modal Bootstrap
             const modal = new bootstrap.Modal(document.getElementById("modalresultado"));
             modal.show();
         });
 
-
+        // Função para resetar o formulário e o resultado
         document.querySelectorAll(".resetForm").forEach(function (btn) {
             btn.addEventListener("click", function () {
-                document.getElementById("iaForm").reset();
+                const form = document.getElementById("iaForm");
+                form.reset();
+                form.classList.remove("was-validated"); // 🔹 limpa validação visual
+
+                // Se quiser também esconder o resultado
+                document.getElementById("resultContainer").style.display = "none";
             });
         });
+
 
 
 
