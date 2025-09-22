@@ -213,6 +213,47 @@
     .select-custom:focus {
         box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
     }
+
+    #programador {
+        position: relative;
+        /* necessário para o overlay */
+        background-image: url('./img/programador01.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: black;
+        /* cor do texto sobre overlay */
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #programador::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(224, 224, 224, 0.68);
+
+        z-index: 1;
+    }
+
+    /* texto acima da camada overlay */
+    #programador .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    #modalresultado .modal-header {
+        border-bottom: none;
+    }
+
+    #modalresultado .modal-footer {
+        border-top: none;
+    }
 </style>
 
 <body>
@@ -235,6 +276,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#simulador"><i class="bi bi-card-checklist"></i> Simulador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#programador"><i class="bi bi-keyboard"></i> Programador</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#equipe"><i class="bi bi-people-fill"></i> Equipe</a>
@@ -397,11 +441,9 @@
                                 Transformação em
                                 Curso
                             </h3>
-                            <p>A contabilidade está entre as áreas mais impactadas — e beneficiadas —
-                                pelo avanço da
+                            <p>A contabilidade está entre as áreas mais impactadas e beneficiadas pelo avanço da
                                 inteligência artificial (IA). Ferramentas inteligentes vêm revolucionando rotinas,
-                                reduzindo
-                                erros e aumentando a produtividade dos profissionais da área.</p>
+                                reduzindo erros e aumentando a produtividade dos profissionais da área. </p>
                             <p>Em 2025, essa transformação tende a se tornar ainda mais intensa. Os contadores
                                 tiveram
                                 (e
@@ -484,51 +526,50 @@
                                 transformação?
                             </h3>
 
-                            <p>A profissão de intérprete de Libras sempre foi um elo essencial entre mundos: o da
-                                comunidade
-                                surda e o da sociedade ouvinte. Com sensibilidade, contexto cultural e habilidade
-                                linguística, esses profissionais fazem mais do que traduzir palavras, eles traduzem
-                                sentidos, intenções e emoções.</p>
-                            <p>Mas surge a pergunta que inquieta: a inteligência artificial pode substituir os
-                                intérpretes
-                                humanos?</p>
-                            <p>Nos últimos anos, vimos aplicativos e softwares de tradução em tempo real ganhando
-                                destaque,
-                                prometendo transformar voz em Libras e vice-versa em questão de segundos. A promessa
-                                é
-                                tentadora: acessibilidade em qualquer lugar, a qualquer hora. No entanto, apesar do
-                                avanço
-                                tecnológico, a IA ainda tropeça em nuances culturais, expressões idiomáticas e,
-                                principalmente, no aspecto humano da comunicação. A Libras, como qualquer língua,
-                                vai
-                                além
-                                de sinais mecânicos, envolve expressões faciais, entonação corporal e contexto
-                                social
-                                que
-                                nenhuma máquina domina com naturalidade.</p>
-                            <p>Portanto, embora a inteligência artificial seja uma ferramenta poderosa e esteja
-                                destinada a
-                                se tornar uma aliada indispensável, ela não deve extinguir a profissão. Pelo
-                                contrário:
-                                os
-                                intérpretes de Libras tendem a ganhar ainda mais relevância, atuando em situações
-                                complexas,
-                                em contextos de maior responsabilidade (como tribunais, hospitais ou eventos
-                                oficiais) e
-                                também no treinamento e supervisão das próprias tecnologias de acessibilidade.</p>
-                            <p>Se há um risco, ele não é o de desaparecer, mas o de se transformar. Assim como em
-                                outras
-                                áreas, os intérpretes precisarão se reinventar, dominando novas ferramentas e
-                                ocupando
-                                espaços estratégicos onde a presença humana é insubstituível.</p>
-                            <p>Em resumo, o futuro aponta para uma parceria: máquinas ampliando o acesso, e
-                                intérpretes
+                            <p>
+                                A profissão de intérprete de Libras sempre foi um elo essencial entre mundos: o da
+                                comunidade surda e o da sociedade ouvinte. Com sensibilidade, contexto cultural e
+                                habilidade linguística, esses profissionais fazem mais do que traduzir palavras, eles
+                                traduzem sentidos, intenções e emoções.
+                            </p>
+
+                            <p>
+                                Mas surge a pergunta que inquieta: a inteligência artificial pode substituir os
+                                intérpretes humanos?
+                            </p>
+
+                            <p>
+                                Nos últimos anos, vimos aplicativos e softwares de tradução em tempo real ganhando
+                                destaque, prometendo transformar voz em Libras e vice-versa em questão de segundos. A
+                                promessa é tentadora: acessibilidade em qualquer lugar, a qualquer hora. No entanto,
+                                apesar do avanço tecnológico, a IA ainda tropeça em nuances culturais, expressões
+                                idiomáticas e, principalmente, no aspecto humano da comunicação. A Libras, como qualquer
+                                língua, vai além de sinais mecânicos, envolve expressões faciais, entonação corporal e
+                                contexto social que nenhuma máquina domina com naturalidade.
+                            </p>
+
+                            <p>
+                                Portanto, embora a inteligência artificial seja uma ferramenta poderosa e esteja
+                                destinada a se tornar uma aliada indispensável, ela não deve extinguir a profissão. Pelo
+                                contrário: os intérpretes de Libras tendem a ganhar ainda mais relevância, atuando em
+                                situações complexas, em contextos de maior responsabilidade (como tribunais, hospitais
+                                ou eventos oficiais), no treinamento e supervisão das próprias tecnologias de
+                                acessibilidade.
+                            </p>
+
+                            <p>
+                                Se há um risco, ele não é o de desaparecer, mas o de se transformar. Assim como em
+                                outras áreas, os intérpretes precisarão se reinventar, dominando novas ferramentas e
+                                ocupando espaços estratégicos onde a presença humana é insubstituível.
+                            </p>
+
+                            <p>
+                                Em resumo, o futuro aponta para uma parceria: máquinas ampliando o acesso, intérpretes
                                 garantindo a qualidade e humanidade da comunicação. Afinal, nenhuma inteligência
-                                artificial
-                                consegue traduzir um olhar acolhedor ou a sensibilidade de estar ao lado de quem
-                                precisa
-                                ser
-                                ouvido.</p>
+                                artificial consegue traduzir um olhar acolhedor ou a sensibilidade de estar ao lado de
+                                quem precisa ser ouvido.
+                            </p>
+
                             <div class="card-footer text-center">
                                 <a class=" btn btn-danger hide-btn" data-target="div2" href="#profissoes">Fechar</a>
                             </div>
@@ -671,7 +712,7 @@
                 </div>
             </section>
 
-            <section id="simulador" class="my-5 py-4">
+            <section id="simulador" class="mt-5 py-4">
 
                 <div class="container">
 
@@ -785,7 +826,7 @@
 
                         <div class="text-center">
                             <button type="submit" class="btn bg-primary-badge text-white">Calcular Impacto</button>
-                            <button type="button" id="resetBtn" class="btn btn-outline-secondary">Limpar</button>
+                            <!--<button type="button" id="resetBtn" class="btn btn-outline-secondary">Limpar</button>-->
                         </div>
                         <div class=" text-center">
                             <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -795,18 +836,43 @@
 
                     </form>
 
-                    <div class="mt-4" id="resultContainer" style="display:none;">
-                        <h5>Resultado:</h5>
-                        <div class="progress" style="height: 50px;">
-                            <div id="impactBar"
-                                class="progress-bar progress-bar-striped progress-bar-animated text-black"
-                                role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                                style="width: 0%">0%
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+            </section>
+
+            <section id="programador">
+                <div class="container">
+                    <h2 class="my-4 text-center"><i class="bi bi-keyboard fs-1"></i>
+                        Será Que a Carreira de Programador Vai Sobreviver à Era da IA?
+                    </h2>
+                    <p>
+                        A profissão de programador está sendo fortemente impactada pela Inteligência Artificial.
+                        Tarefas repetitivas, testes e análise de bugs já podem ser automatizados por ferramentas como
+                        GitHub Copilot, ChatGPT e TabNine, liberando o programador para focar em criatividade e soluções
+                        inovadoras.
+                    </p>
+
+                    <p>
+                        Linguagens em alta incluem Python, JavaScript, Go e Rust, enquanto sistemas legados perdem
+                        relevância.
+                        Integrar IA às IDEs, como VS Code ou JetBrains, é cada vez mais comum, com sugestões
+                        inteligentes de código e documentação automática.
+                    </p>
+
+                    <p>
+                        Programadores que se limitam a tarefas mecânicas tendem a sofrer, enquanto perfis criativos,
+                        estratégicos e com visão de produto se sobressaem.
+                        O segredo é não apenas escrever código, mas transformar ideias em soluções concretas, usando a
+                        IA como aliada.
+                    </p>
+
+                    <p>
+                        Como diz um profissional da área: <em>"A inteligência artificial me ajuda a escrever códigos
+                            mais rápido e detectar erros que demoraria horas para achar. Tarefas simples estão
+                            automatizadas, sobrando tempo para criar soluções novas e inovadoras."</em>
+                    </p>
+                </div>
+                </div>
+
             </section>
 
 
@@ -904,7 +970,7 @@
                                     rel="noopener noreferrer">
                                     <i class="bi bi-linkedin fs-1 mb-1"></i>
                                     <span class="fw-bold text-primary text-center">Prof. Karina Casola Fernandes
-                                    </span></span>
+                                    </span><span class="fst-italic">Orientadora</span>
                                 </a>
                             </div>
                         </div>
@@ -1046,7 +1112,7 @@
         </div>
     </footer>
 
-    <!-- Modal -->
+    <!-- Modal de metodologia de pesquisa -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -1112,11 +1178,45 @@
         </div>
     </div>
 
+    <!-- Modal resultado so Dimulador de Impacto -->
+    <div class="modal fade" id="modalresultado" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel"><i class="bi bi-card-checklist fs-1"></i> Sua
+                        profissão será impactada</h1>
+                    <button type="button" class="btn-close resetForm" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <section class="container">
+                        <div class="mt-4" id="resultContainer" style="display:none;">
+                            <h5 class="text-center">Resultado</h5>
+                            <div class="progress" style="height: 50px;">
+                                <div id="impactBar"
+                                    class="progress-bar progress-bar-striped progress-bar-animated text-black"
+                                    role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                                    style="width: 0%">0%
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary resetForm" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
     <script>
+
         document.getElementById("iaForm").addEventListener("submit", function (e) {
             e.preventDefault();
 
@@ -1149,12 +1249,17 @@
             }
 
             resultContainer.style.display = "block";
+
+            // Abre o modal Bootstrap
+            const modal = new bootstrap.Modal(document.getElementById("modalresultado"));
+            modal.show();
         });
 
-        // Reset
-        document.getElementById("resetBtn").addEventListener("click", function () {
-            document.getElementById("iaForm").reset();
-            document.getElementById("resultContainer").style.display = "none";
+
+        document.querySelectorAll(".resetForm").forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                document.getElementById("iaForm").reset();
+            });
         });
 
 
