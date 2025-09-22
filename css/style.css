@@ -25,6 +25,8 @@ body {
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
     color: var(--tx-gray-900);
+    padding-top: 80px;
+    /* Espaço para o navbar fixo */
 
     .text-primary {
         color: var(--bg-3) !important;
@@ -33,6 +35,11 @@ body {
     .bg-primary-badge {
         background-color: var(--bg-3) !important;
     }
+}
+
+html {
+    scroll-padding-top: 80px;
+    /* Espaço para o navbar fixo */
 }
 
 h1,
@@ -94,12 +101,21 @@ h6 {
 
 .tab-content {
     display: none;
-    /* escondidas por padrão */
+    /* começa invisível */
+    opacity: 0;
+    /* começa transparente */
+    transform: translateY(-10px);
+    /* começa levemente deslocada */
+    transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
 .tab-content.active {
     display: block;
-    /* só aparece a ativa */
+    /* fica visível */
+    opacity: 1;
+    /* aparece */
+    transform: translateY(0);
+    /* volta à posição normal */
 }
 
 a {

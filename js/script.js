@@ -113,6 +113,5 @@
             targetDiv.classList.remove("active");
         });
     });
-
 })();
 
