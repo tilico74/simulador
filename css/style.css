@@ -1,0 +1,241 @@
+:root {
+    /* fundos */
+    --bg-1: #01233c;
+    --bg-2: #184F71;
+    --bg-3: #196899;
+    --bg-4: #41A3DC;
+    --bg-5: #3DA9BE;
+    --bg-6: #CBCBAF;
+    --bg-7: #E0E0E0;
+
+    /* textos claros */
+    --tx-white: #FFFFFF;
+    --tx-white-soft: #FAFAFA;
+    /* idem F8FAFC */
+    --tx-white-muted: #E5E7EB;
+
+    /* textos escuros */
+    --tx-black: #000000;
+    --tx-gray-900: #111827;
+    --tx-slate-900: #0B1220;
+    --tx-gray-800: #1F2937;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    color: var(--tx-gray-900);
+
+    .text-primary {
+        color: var(--bg-3) !important;
+    }
+
+    .bg-primary-badge {
+        background-color: var(--bg-3) !important;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    color: var(--bg-1);
+}
+
+.card-footer {
+    border-top: none;
+    background-color: transparent;
+}
+
+.navbar {
+    background: var(--bg-1) !important;
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#resultContainer .progress {
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+#equipe img {
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#equipe img:hover {
+    transform: scale(1.05);
+}
+
+.footer {
+    background: var(--bg-7);
+    color: var(--tx-white-muted);
+    color: var(--bg-1);
+}
+
+.footer img:hover {
+    transform: scale(1.05);
+}
+
+.tab-content {
+    display: none;
+    /* escondidas por padrão */
+}
+
+.tab-content.active {
+    display: block;
+    /* só aparece a ativa */
+}
+
+a {
+    text-decoration: none;
+    color: var(--bg-3);
+}
+
+/* Flip card equipe */
+.flip-card {
+    background-color: transparent;
+    width: 180px;
+    height: 180px;
+    perspective: 1000px;
+    margin: 0 auto;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--bg-1);
+    box-shadow: #101111 0px 3px 8px;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-back {
+    background: #fff;
+    color: var(--bg-2);
+    transform: rotateY(180deg);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    border: 2px solid var(--bg-4);
+}
+
+#simulador {
+    background-color: var(--tx-white-muted);
+}
+
+.rotate-animate {
+    display: inline-block;
+    animation: spin 0.6s infinite alternate;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(90deg);
+    }
+
+    to {
+        transform: rotate(100deg);
+    }
+}
+
+.text-banner {
+    text-shadow:
+        -2px -1px 0 rgb(156, 106, 5),
+        2px -1px 0 rgb(156, 106, 5),
+        -2px 1px 0 rgb(156, 106, 5),
+        2px 1px 0 rgb(156, 106, 5),
+        2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.select-custom {
+    background-color: var(--tx-white-muted);
+    border: 0.12rem solid var(--bg-4);
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.select-custom:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+#programador {
+    position: relative;
+    /* necessário para o overlay */
+    background-image: url('../img/programador01.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    /* cor do texto sobre overlay */
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#programador::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(224, 224, 224, 0.68);
+
+    z-index: 1;
+}
+
+/* texto acima da camada overlay */
+#programador .container {
+    position: relative;
+    z-index: 2;
+}
+
+#modalresultado .modal-header {
+    border-bottom: none;
+}
+
+#modalresultado .modal-footer {
+    border-top: none;
+}
