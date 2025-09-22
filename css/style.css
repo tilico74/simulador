@@ -52,6 +52,36 @@ h6 {
     color: var(--bg-1);
 }
 
+/* Acessibilidade: link para pular o menu */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus,
+.visually-hidden-focusable:focus {
+    position: static;
+    left: auto;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    background: #000;
+    color: #fff;
+    z-index: 1050;
+}
+
+:focus {
+    outline: 3px solid #ffbf47;
+    /* ou cor acessível do seu design */
+    outline-offset: 2px;
+}
+
+/* Fim Acessibilidade */
+
 .card-footer {
     border-top: none;
     background-color: transparent;
@@ -116,6 +146,12 @@ h6 {
     /* aparece */
     transform: translateY(0);
     /* volta à posição normal */
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tab-content {
+        transition: none !important;
+    }
 }
 
 a {
